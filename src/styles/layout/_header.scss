@@ -1,2 +1,18 @@
 @use '../utils/vars' as *;
 @use '../utils/mixins' as *;
+
+.header {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  &__nav {
+    margin-right: auto;
+    margin-left: 48px;
+  }
+}

@@ -1,0 +1,41 @@
+section.section.container
+  .results 
+    .results__col.results__col--nav 
+      h3.results__title Some Results
+      .results-btn-list(role='tablist')
+        button.results-btn-list__item(type="button" role='tab' aria-selected='true' aria-controls='results-tabs-1') Online store of pet products
+        button.results-btn-list__item(type="button" role='tab' aria-selected='false' aria-controls='results-tabs-2') Childrens Cafe
+        button.results-btn-list__item(type="button" role='tab' aria-selected='false' aria-controls='results-tabs-3') Flower Market
+        button.results-btn-list__item(type="button" role='tab' aria-selected='false' aria-controls='results-tabs-4') Hamburg Restaurant
+        button.results-btn-list__item(type="button" role='tab' aria-selected='false' aria-controls='results-tabs-5') Interior company
+    .results__col.results__col--content 
+      #results-tabs-1.results__content(role="tabpanel")
+        .results__badge 
+          span.results__ctr CTR 
+          span.results__value 3.25%
+        picture.results__image 
+          img(src=require('@/images/results/1.jpg') alt="")
+      #results-tabs-2.results__content(role="tabpanel")
+        .results__badge 
+          span.results__ctr CTR 
+          span.results__value 3.26%
+        picture.results__image 
+          img(src=require('@/images/results/1.jpg') alt="")
+      #results-tabs-3.results__content(role="tabpanel")
+        .results__badge 
+          span.results__ctr CTR 
+          span.results__value 3.27%
+        picture.results__image 
+          img(src=require('@/images/results/1.jpg') alt="")
+      #results-tabs-4.results__content(role="tabpanel")
+        .results__badge 
+          span.results__ctr CTR 
+          span.results__value 3.28%
+        picture.results__image 
+          img(src=require('@/images/results/1.jpg') alt="")
+      #results-tabs-5.results__content(role="tabpanel")
+        .results__badge 
+          span.results__ctr CTR 
+          span.results__value 3.29%
+        picture.results__image 
+          img(src=require('@/images/results/1.jpg') alt="")

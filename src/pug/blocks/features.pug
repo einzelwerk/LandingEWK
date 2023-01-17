@@ -1,0 +1,29 @@
+section.section.container 
+  .features-wrapper.swiper
+    .features.swiper-wrapper 
+      .features__item.swiper-slide 
+        - locals.sectionTitle = "Save time on processes"
+        - locals.sectionDesc = "Don't waste time with long discussions and approvals. Describe your ideas and put them to work."
+        include ../blocks/section-heading
+        picture.features__image
+          img(src=require('@/images/features/1.jpg'), alt="")
+      .features__item.swiper-slide 
+        - locals.sectionTitle = "Quickly test hypotheses"
+        - locals.sectionDesc = "Don't waste time with long discussions and approvals. Describe your ideas and put them to work."
+        include ../blocks/section-heading
+        picture.features__image
+          img(src=require('@/images/features/2.jpg'), alt="")
+      .features__item.swiper-slide 
+        - locals.sectionTitle = "Creatives based on analysis"
+        - locals.sectionDesc = "Don't waste time with long discussions and approvals. Describe your ideas and put them to work."
+        include ../blocks/section-heading
+        picture.features__image
+          img(src=require('@/images/features/3.jpg'), alt="")
+      .features__item.swiper-slide 
+        - locals.sectionTitle = "Increase conversion rates"
+        - locals.sectionDesc = "Don't waste time with long discussions and approvals. Describe your ideas and put them to work."
+        include ../blocks/section-heading
+        picture.features__image
+          img(src=require('@/images/features/4.jpg'), alt="")
+    .custom-slider-pagination   
+

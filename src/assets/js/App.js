@@ -1,1 +1,3 @@
-import './Nav';
+import './Sliders';
+import './Tabs';
+import './Faq';

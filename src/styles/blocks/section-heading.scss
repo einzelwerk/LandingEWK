@@ -1,0 +1,23 @@
+@use '../utils/mixins' as *;
+
+.section-heading {
+  max-width: 780px;
+  margin: auto;
+  margin-bottom: 80px;
+
+  &__title {
+    font-size: rem(48px);
+    text-align: center;
+    letter-spacing: -0.03em;
+  }
+
+  &__desc {
+    margin-top: 32px;
+
+    font-size: rem(20px);
+    font-weight: 350;
+    line-height: 150%;
+    color: var(--gray-300);
+    text-align: center;
+  }
+}

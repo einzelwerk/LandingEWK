@@ -1,6 +1,7 @@
 // vendor
-// @use 'vendor/reset';
-@use 'vendor/normalize';
+@use 'vendor/reset';
+
+// @use 'vendor/normalize';
 
 // utils
 @use 'utils/vars';
@@ -20,3 +21,17 @@
 // pages
 
 // blocks
+@use 'blocks/logo';
+@use 'blocks/nav';
+@use 'blocks/hero';
+@use 'blocks/video';
+@use 'blocks/section-heading';
+@use 'blocks/features';
+@use 'blocks/custom-slider-pagination';
+@use 'blocks/cases';
+@use 'blocks/results';
+@use 'blocks/reviews';
+@use 'blocks/steps';
+@use 'blocks/features-grid';
+@use 'blocks/cta';
+@use 'blocks/faq';

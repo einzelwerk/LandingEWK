@@ -1,1 +1,42 @@
 @use '../utils/mixins' as *;
+
+.btn {
+  cursor: pointer;
+  padding: 12px 20px;
+  text-align: center;
+
+  &--primary {
+    color: var(--gray-900);
+    background: var(--accent-color);
+    border-radius: 8px;
+  }
+
+  &--purchase {
+    width: 100%;
+    padding: 25px;
+
+    font-size: rem(20px);
+    color: var(--gray-900);
+
+    background: var(--accent-color);
+    border-radius: 8px;
+  }
+
+  &--icon {
+    position: relative;
+    padding: 42px 25px;
+    font-size: rem(32px);
+    border-radius: 32px;
+
+    .btn__inner {
+      position: relative;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateX(85%) translateY(-50%) rotate(-15deg);
+      }
+    }
+  }
+}
