@@ -40,7 +40,7 @@ class Faq {
 
 const faqItems = document.querySelectorAll('.faq__item');
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   faqItems.forEach((item) => {
     new Faq(item);
   });

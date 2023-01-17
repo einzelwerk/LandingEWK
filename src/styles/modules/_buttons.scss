@@ -4,6 +4,11 @@
   cursor: pointer;
   padding: 12px 20px;
   text-align: center;
+  transition: background 0.5s;
+
+  &:hover {
+    background: #c8de41;
+  }
 
   &--primary {
     color: var(--gray-900);

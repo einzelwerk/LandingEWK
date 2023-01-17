@@ -1,1 +1,43 @@
 @use '../utils/mixins' as *;
+
+.footer {
+  margin-top: var(--gap-y);
+  padding: 47px 60px;
+
+  font-weight: 350;
+  color: var(--gray-400);
+
+  border: 1px solid var(--gray-800);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item {
+    margin-right: 24px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__copyright {
+    margin-right: 24px;
+  }
+
+  &__madein {
+    color: var(--white-color);
+  }
+
+  &__btn {
+    padding: 14px 20px;
+    font-size: rem(16px);
+    font-weight: 400;
+  }
+}

@@ -93,28 +93,16 @@
 
   &__item {
     cursor: pointer;
+
     margin-bottom: 48px;
+
     font-size: rem(32px);
+    color: var(--gray-700);
+
     transition: color 0.5s;
 
-    &:nth-child(1) {
-      color: var(--gray-300);
-    }
-
-    &:nth-child(2) {
+    &:hover {
       color: var(--gray-600);
-    }
-
-    &:nth-child(3) {
-      color: var(--gray-700);
-    }
-
-    &:nth-child(4) {
-      color: var(--gray-800);
-    }
-
-    &:nth-child(5) {
-      color: var(--gray-900);
     }
 
     &[aria-selected='true'] {
