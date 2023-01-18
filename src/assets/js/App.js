@@ -3,3 +3,4 @@ import './Tabs';
 import './Faq';
 import './CustomCursor';
 import './Video';
+import './Modal';

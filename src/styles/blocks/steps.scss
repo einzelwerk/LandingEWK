@@ -1,11 +1,19 @@
 @use '../utils/mixins' as *;
 
 .steps {
+  @include media(md) {
+    grid-template-columns: 1fr;
+  }
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
 
   &__item {
+    @include media(md) {
+      padding: 20px;
+    }
+
     padding: 30px;
     background: #272727;
     border-radius: 24px;
@@ -32,6 +40,10 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: rem(20px);
+    }
+
     margin-bottom: 16px;
     font-size: rem(24px);
   }

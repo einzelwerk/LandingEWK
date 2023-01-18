@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <script defer src="assets/main.js"></script><link href="assets/css/main.css" rel="stylesheet"></head>
+  <body>
+    <div class="root">
+<header class="header">
+  <div class="header__inner container"> 
+    <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div><a class="header__btn btn btn--secondary" href="/"><span class="btn__inner">Back to site</span></a>
+  </div>
+</header>
+      <main class="main">
+        <section class="container">
+          <div class="thank-you">
+            <h1 class="thank-you__title">Thank you! We have received your payment. Now let's get to work!</h1>
+            <div class="thank-you__desc">It will take 20-30 minutes</div><a class="thank-you__btn btn btn--primaru" href="#"> <span class="btn__inner">Fill out the brief</span></a>
+            <button class="thank-you__share"> <span> Share with friend</span>
+              <svg width="24" height="24">
+                <use xlink:href="sprite.svg#share_sprite"> </use>
+              </svg>
+            </button>
+            <picture class="thank-you__image"><img src="assets/images/thank-you.svg" alt=""></picture>
+          </div>
+        </section>
+      </main>
+<footer class="footer footer-secondary">
+  <div class="footer__inner container">
+    <nav class="footer__nav">
+      <ul class="footer__nav-list"> 
+        <li class="footer__nav-item"> <a class="footer__nav-link" href="">Terms of Service</a></li>
+        <li class="footer__nav-item"> <a class="footer__nav-link" href="">Privacy Policy</a></li>
+      </ul>
+    </nav>
+    <div class="footer__right"><span class="footer__copyright">2023. © All rights reserved.</span><a class="footer__madein" href="https://www.einzelwerk.pro/" target="_blank">by Einzelwerk</a></div>
+  </div>
+</footer>
+<div class="modal-wrapper" data-modal-el="purchase-modal">
+  <div class="modal modal-purchase">
+    <div class="modal-purchase__inner">
+      <div class="modal__close js-close-modal">
+        <svg width="26" height="26">
+          <use xlink:href="sprite.svg#close_sprite"> </use>
+        </svg>
+      </div>
+      <h4 class="modal-purchase__title">Select payment method</h4>
+      <p class="modal-purchase__desc">Immediately after payment we will send you a link to the brief</p>
+      <div class="modal-purchase__payment payment-method">
+        <div class="payment-method__item"> <a class="payment-method__link" href="">
+            <picture class="payment-method__image"><img src="assets/images/payment/1.jpg" alt=""></picture></a></div>
+        <div class="payment-method__item"> <a class="payment-method__link" href="">
+            <picture class="payment-method__image"><img src="assets/images/payment/2.jpg" alt=""></picture></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-wrapper" data-modal-el="timer-modal">
+  <div class="modal modal-timer">
+    <div class="modal-timer__inner">
+      <div class="modal-timer__close js-close-modal modal__close">
+        <svg width="26" height="26">
+          <use xlink:href="sprite.svg#close_sprite"> </use>
+        </svg>
+      </div>
+      <h4 class="modal-timer__title">You can get 12 creatives in 3 different designs at a discount</h4>
+      <picture class="modal-timer__image"><img src="assets/images/modal-timer.png" alt=""></picture>
+      <div class="modal-timer__valid">valid for 
+        <div class="modal-timer__timer-group timer-group">
+          <div class="timer-group__item timer-group__days">3 days</div>
+          <div class="timer-group__item timer-group__hours">5 hours</div>
+          <div class="timer-group__item timer-group__minutes">18 minutes</div>
+        </div>
+      </div>
+      <div class="modal-timer__btn btn btn--primary js-close-modal" data-modal="purchase-modal"><span class="btn__inner">Get a set of creatives</span></div>
+    </div>
+  </div>
+</div>
+    </div>
+  </body>
+</html>

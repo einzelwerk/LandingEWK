@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
   <script defer src="assets/main.js"></script><link href="assets/css/main.css" rel="stylesheet"></head>
   <body>
+    <div class="root">
 <header class="header">
   <div class="header__inner container"> 
     <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
@@ -17,15 +18,16 @@
         <li class="nav__item"> <a class="nav__link" href="">Deliverables</a></li>
       </ul>
     </nav>
-    <button class="header__btn btn btn--primary" type="button"><span class="btn__inner">Get a set of creatives</span></button>
+    <button class="header__btn btn btn--primary hidden-mobile" type="button" data-modal="purchase-modal"><span class="btn__inner">Get a set of creatives</span></button>
+    <button class="header__btn btn btn--primary hidden-desktop" type="button" data-modal="purchase-modal"><span class="btn__inner">Get a set</span></button>
   </div>
 </header>
-    <main class="main">
+      <main class="main">
 <section class="section container"> 
   <div class="hero">
     <h1 class="hero__title">A set of high-conversion ADS creatives<span class="hero__badge"><span class="hero__price">99$</span><span class="hero__vat">+VAT</span></span></h1>
     <p class="hero__desc">Test ideas and increase conversions, we'll take care of the rest</p>
-    <div class="container hero__video-wrapper">
+    <div class="hero__video-wrapper">
       <div class="hero__video video"> 
         <video class="video__src" src="https://einzelwerk.ru/assets/images/hero-10215256.mp4" muted playsinline loop autoplay> </video>
       </div>
@@ -241,8 +243,10 @@
         <p class="reviews__text">«Einzelwerk's ADS Creative set was exactly what we needed to take our social media advertising to the next level. The team was professional, responsive, and delivered high-quality creatives.»</p>
         <div class="reviews__author reviews-author">
           <div class="reviews-author__image"><img src="assets/images/user.jpg" alt=""></div>
-          <div class="reviews-author__name">Stephen Lang </div>
-          <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          <div class="reviews-author__info">
+            <div class="reviews-author__name">Stephen Lang </div>
+            <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          </div>
         </div>
       </div>
       <div class="reviews__item swiper-slide">
@@ -256,8 +260,10 @@
         <p class="reviews__text">«Einzelwerk's ADS Creative set was exactly what we needed to take our social media advertising to the next level. The team was professional, responsive, and delivered high-quality creatives.»</p>
         <div class="reviews__author reviews-author">
           <div class="reviews-author__image"><img src="assets/images/user.jpg" alt=""></div>
-          <div class="reviews-author__name">Stephen Lang </div>
-          <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          <div class="reviews-author__info">
+            <div class="reviews-author__name">Stephen Lang </div>
+            <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          </div>
         </div>
       </div>
       <div class="reviews__item swiper-slide">
@@ -271,8 +277,10 @@
         <p class="reviews__text">«Einzelwerk's ADS Creative set was exactly what we needed to take our social media advertising to the next level. The team was professional, responsive, and delivered high-quality creatives.»</p>
         <div class="reviews__author reviews-author">
           <div class="reviews-author__image"><img src="assets/images/user.jpg" alt=""></div>
-          <div class="reviews-author__name">Stephen Lang </div>
-          <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          <div class="reviews-author__info">
+            <div class="reviews-author__name">Stephen Lang </div>
+            <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          </div>
         </div>
       </div>
       <div class="reviews__item swiper-slide">
@@ -286,8 +294,10 @@
         <p class="reviews__text">«Einzelwerk's ADS Creative set was exactly what we needed to take our social media advertising to the next level. The team was professional, responsive, and delivered high-quality creatives.»</p>
         <div class="reviews__author reviews-author">
           <div class="reviews-author__image"><img src="assets/images/user.jpg" alt=""></div>
-          <div class="reviews-author__name">Stephen Lang </div>
-          <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          <div class="reviews-author__info">
+            <div class="reviews-author__name">Stephen Lang </div>
+            <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          </div>
         </div>
       </div>
       <div class="reviews__item swiper-slide">
@@ -301,8 +311,10 @@
         <p class="reviews__text">«Einzelwerk's ADS Creative set was exactly what we needed to take our social media advertising to the next level. The team was professional, responsive, and delivered high-quality creatives.»</p>
         <div class="reviews__author reviews-author">
           <div class="reviews-author__image"><img src="assets/images/user.jpg" alt=""></div>
-          <div class="reviews-author__name">Stephen Lang </div>
-          <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          <div class="reviews-author__info">
+            <div class="reviews-author__name">Stephen Lang </div>
+            <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          </div>
         </div>
       </div>
       <div class="reviews__item swiper-slide">
@@ -316,8 +328,10 @@
         <p class="reviews__text">«Einzelwerk's ADS Creative set was exactly what we needed to take our social media advertising to the next level. The team was professional, responsive, and delivered high-quality creatives.»</p>
         <div class="reviews__author reviews-author">
           <div class="reviews-author__image"><img src="assets/images/user.jpg" alt=""></div>
-          <div class="reviews-author__name">Stephen Lang </div>
-          <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          <div class="reviews-author__info">
+            <div class="reviews-author__name">Stephen Lang </div>
+            <div class="reviews-author__position">CEO, bulthaup Hamburg</div>
+          </div>
         </div>
       </div>
     </div>
@@ -331,21 +345,27 @@
         <h4 class="features-grid__title">Summary of 12 creatives</h4>
         <p class="features-grid__desc">Don't let your ADS Creatives get lost in the crowd! Try these four design options to make your ads stand out and grab the attention of your audience. </p>
       </div>
-      <picture class="features-grid__image"><img src="assets/images/features-grid/1.svg" alt=""></picture>
+      <picture class="features-grid__image">
+        <source media="(max-width:768px)" srcset="assets/images/features-grid/1-m.svg"><img src="assets/images/features-grid/1.svg" alt="">
+      </picture>
     </div>
     <div class="features-grid__item">
       <div class="features-grid__text"> 
         <h4 class="features-grid__title">3 creative formats for any social networks</h4>
         <p class="features-grid__desc">Are you tired of the same old social media posts? Try shaking things up with these three creative formats.</p>
       </div>
-      <picture class="features-grid__image"><img src="assets/images/features-grid/2.svg" alt=""></picture>
+      <picture class="features-grid__image">
+        <source media="(max-width:768px)" srcset="assets/images/features-grid/2-m.svg"><img src="assets/images/features-grid/2.svg" alt="">
+      </picture>
     </div>
     <div class="features-grid__item">
       <div class="features-grid__text"> 
         <h4 class="features-grid__title">4 design options for ADS</h4>
         <p class="features-grid__desc">Are you tired of the same old social media posts? Try shaking things up with these three creative formats that are sure to get your content noticed. </p>
       </div>
-      <picture class="features-grid__image"><img src="assets/images/features-grid/3.svg" alt=""></picture>
+      <picture class="features-grid__image">
+        <source media="(max-width:768px)" srcset="assets/images/features-grid/3-m.svg"><img src="assets/images/features-grid/3.svg" alt="">
+      </picture>
     </div>
   </div>
 </section>
@@ -446,18 +466,59 @@
     </div>
   </div>
 </section>
-    </main>
+      </main>
 <footer class="footer"> 
-  <div class="footer__inner">
+  <div class="footer__inner container">
     <nav class="footer__nav">
       <ul class="footer__nav-list"> 
         <li class="footer__nav-item"> <a class="footer__nav-link" href="">Terms of Service</a></li>
         <li class="footer__nav-item"> <a class="footer__nav-link" href="">Privacy Policy</a></li>
       </ul>
     </nav>
-    <button class="footer__btn btn btn--primary" type="button"><span class="btn__inner">Get a set of creatives</span></button>
+    <button class="footer__btn btn btn--primary" type="button" data-modal="purchase-modal"><span class="btn__inner">Get a set of creatives</span></button>
     <div class="footer__right"><span class="footer__copyright">2023. © All rights reserved.</span><a class="footer__madein" href="https://www.einzelwerk.pro/" target="_blank">by Einzelwerk</a></div>
   </div>
 </footer>
+<div class="modal-wrapper" data-modal-el="purchase-modal">
+  <div class="modal modal-purchase">
+    <div class="modal-purchase__inner">
+      <div class="modal__close js-close-modal">
+        <svg width="26" height="26">
+          <use xlink:href="sprite.svg#close_sprite"> </use>
+        </svg>
+      </div>
+      <h4 class="modal-purchase__title">Select payment method</h4>
+      <p class="modal-purchase__desc">Immediately after payment we will send you a link to the brief</p>
+      <div class="modal-purchase__payment payment-method">
+        <div class="payment-method__item"> <a class="payment-method__link" href="">
+            <picture class="payment-method__image"><img src="assets/images/payment/1.jpg" alt=""></picture></a></div>
+        <div class="payment-method__item"> <a class="payment-method__link" href="">
+            <picture class="payment-method__image"><img src="assets/images/payment/2.jpg" alt=""></picture></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-wrapper" data-modal-el="timer-modal">
+  <div class="modal modal-timer">
+    <div class="modal-timer__inner">
+      <div class="modal-timer__close js-close-modal modal__close">
+        <svg width="26" height="26">
+          <use xlink:href="sprite.svg#close_sprite"> </use>
+        </svg>
+      </div>
+      <h4 class="modal-timer__title">You can get 12 creatives in 3 different designs at a discount</h4>
+      <picture class="modal-timer__image"><img src="assets/images/modal-timer.png" alt=""></picture>
+      <div class="modal-timer__valid">valid for 
+        <div class="modal-timer__timer-group timer-group">
+          <div class="timer-group__item timer-group__days">3 days</div>
+          <div class="timer-group__item timer-group__hours">5 hours</div>
+          <div class="timer-group__item timer-group__minutes">18 minutes</div>
+        </div>
+      </div>
+      <div class="modal-timer__btn btn btn--primary js-close-modal" data-modal="purchase-modal"><span class="btn__inner">Get a set of creatives</span></div>
+    </div>
+  </div>
+</div>
+    </div>
   </body>
 </html>

@@ -2,6 +2,10 @@
 
 .faq {
   &__heading {
+    @include media(md) {
+      padding: 20px;
+    }
+
     cursor: pointer;
 
     display: flex;
@@ -12,10 +16,25 @@
   }
 
   &__title {
+    @include media(md) {
+      font-size: rem(20px);
+    }
+
     font-size: rem(24px);
+    line-height: 150%;
+  }
+
+  &__icon {
+    @include media(md) {
+      display: none;
+    }
   }
 
   &__item {
+    @include media(md) {
+      margin-bottom: 16px;
+    }
+
     margin-bottom: 20px;
     background: #272727;
     border-radius: 32px;
@@ -36,11 +55,16 @@
   }
 
   &__content {
+    @include media(md) {
+      font-size: rem(16px);
+    }
+
     max-width: 1000px;
     padding: 30px;
     padding-top: 0;
 
     font-size: rem(18px);
+    font-weight: 350;
     line-height: 156%;
     color: var(--gray-700);
 

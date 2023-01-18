@@ -12,6 +12,10 @@
   }
 
   &__nav {
+    @include media(md) {
+      display: none;
+    }
+
     margin-right: auto;
     margin-left: 48px;
   }

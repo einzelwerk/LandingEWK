@@ -7,6 +7,11 @@
 }
 
 .cta {
+  @include media(md) {
+    padding: 30px 20px;
+    background-image: url(../assets/images/sale-bg-m.svg);
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,9 +22,17 @@
   color: var(--gray-500);
 
   background: var(--white-color);
+  background-image: url(../assets/images/sale-bg.svg);
+  background-repeat: no-repeat;
+  background-position: 0 95px;
+  background-size: 100%;
   border-radius: 32px;
 
   &__title {
+    @include media(md) {
+      font-size: rem(36px);
+    }
+
     font-size: rem(48px);
     font-weight: 400;
     color: var(--gray-900);
@@ -28,6 +41,11 @@
   }
 
   &__discount {
+    @include media(md) {
+      margin-bottom: 24px;
+      font-size: rem(36px);
+    }
+
     transform: translateY(-20%);
 
     margin-bottom: 36px;
@@ -42,6 +60,13 @@
   }
 
   &__end-text {
+    @include media(md) {
+      margin-top: 32px;
+      font-size: rem(12px);
+      line-height: 150%;
+      text-align: center;
+    }
+
     margin-top: 60px;
     line-height: 143%;
 
@@ -69,10 +94,16 @@
   display: flex;
 
   &__item {
+    @include media(md) {
+      padding: 6px 10px;
+      font-size: rem(14px);
+    }
+
     margin-right: 4px;
     padding: 8px 16px;
 
     font-size: rem(20px);
+    font-weight: 350;
     line-height: 150%;
 
     background: var(--gray-100);

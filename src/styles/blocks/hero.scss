@@ -2,6 +2,11 @@
 
 .hero {
   &__title {
+    @include media(sm) {
+      margin-bottom: 20px;
+      font-size: rem(32px);
+    }
+
     position: relative;
 
     max-width: 983px;
@@ -15,6 +20,13 @@
   }
 
   &__badge {
+    @include media(md) {
+      width: 77px;
+      height: 77px;
+      font-size: rem(22px);
+      line-height: 1;
+    }
+
     position: absolute;
     right: 10%;
     transform: translateY(-16%) rotate(-15deg);
@@ -39,11 +51,20 @@
   }
 
   &__vat {
+    @include media(md) {
+      font-size: rem(10px);
+      line-height: 1;
+    }
+
     font-size: rem(16px);
     line-height: 150%;
   }
 
   &__desc {
+    @include media(md) {
+      font-size: rem(16px);
+    }
+
     max-width: 580px;
     margin: auto;
 
@@ -55,6 +76,10 @@
   }
 
   &__video-wrapper {
+    @include media(md) {
+      margin-top: 40px;
+    }
+
     margin-top: 80px;
   }
 }
