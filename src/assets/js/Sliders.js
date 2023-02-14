@@ -67,7 +67,6 @@ class Sliders {
         init: false,
 
         slidesPerView: 1.1,
-        loop: true,
 
         spaceBetween: 24,
         effect: 'creative',
@@ -100,11 +99,11 @@ class Sliders {
       slidesPerView: 2.2,
 
       loop: true,
-      speed: 3000,
+      freeMode: true,
       spaceBetween: 8,
       autoplay: {
-        enabled: true,
-        delay: 1,
+        delay: 1000,
+
         disableOnInteraction: false,
       },
     });
