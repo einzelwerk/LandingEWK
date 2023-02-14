@@ -1,0 +1,8 @@
+export default {
+      id: "99_sprite-usage",
+      viewBox: "0 0 84 84",
+      url: __webpack_public_path__ + "C:\\Users\\user\\Desktop\\work\\landingEWK\\src\\assets\\icons\\99_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }
