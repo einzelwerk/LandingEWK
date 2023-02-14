@@ -252,8 +252,9 @@
 
   &__btn {
     @include media(md) {
-      padding: 10px 32px;
+      padding: 16px 32px;
       font-size: rem(16px);
+      border-radius: 12px;
     }
 
     margin-top: 32px;

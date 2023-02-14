@@ -24,6 +24,7 @@
           use(xlink:href="sprite.svg#close_sprite") 
       h4.modal-timer__title You can get 12 creatives in 3 different designs at a discount
       picture.modal-timer__image
+        source(media="(max-width:1024px)", srcset=require('@/images/modal-timer-m.png'))
         img(src=require('@/images/modal-timer.png'), alt="")
       .modal-timer__valid valid for 
         .modal-timer__timer-group.timer-group

@@ -14,10 +14,14 @@ class Sliders {
     const root = document.querySelector('.features-wrapper');
     const sliderInstance = new Swiper(root, {
       ...defaultOptions,
-      modules: [Pagination],
+      modules: [Pagination, Autoplay],
       init: false,
       slidesPerView: 1,
       spaceBetween: 16,
+      speed: 1500,
+      autoplay: {
+        delay: 4000,
+      },
       pagination: {
         el: root.querySelector('.custom-slider-pagination'),
         type: 'bullets',
