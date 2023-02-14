@@ -36,6 +36,10 @@
         display: none;
       }
     }
+
+    &.show {
+      display: block;
+    }
   }
 
   &__item {

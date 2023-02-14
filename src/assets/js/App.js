@@ -5,3 +5,4 @@ import './CustomCursor';
 import './Video';
 import './Modal';
 import './Archon';
+import './ShowCases';
