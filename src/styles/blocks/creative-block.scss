@@ -1,0 +1,130 @@
+@use '../utils/mixins' as *;
+
+@keyframes anim {
+  from {
+    transform: rotate(var(--rotate)) translateY(-32px);
+  }
+
+  to {
+    transform: rotate(var(--rotate)) translateY(0);
+  }
+}
+
+.creative-tags {
+  &__line {
+    @include media(md) {
+      &:last-child {
+        transform: translateY(-10px);
+
+        .creative-tags__item {
+          &:nth-child(2) {
+            transform: rotate(var(--rotate)) translate(-10px, -10px);
+          }
+
+          &:nth-child(3) {
+            transform: rotate(calc(var(--rotate) * -1)) translate(-10px, -10px);
+          }
+        }
+      }
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    @include media(md) {
+      transform: rotate(var(--rotate)) translateX(0);
+      padding: 10px 20px;
+      font-size: 16px;
+      line-height: 150%;
+
+      &:nth-child(2) {
+        transform: rotate(var(--rotate)) translate(10px, -10px);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(var(--rotate)) translate(-10px, -10px);
+      }
+    }
+
+    @include media(md, min-width) {
+      &:first-child {
+        transform: rotate(var(--rotate)) translateX(0);
+      }
+
+      &:last-child {
+        transform: rotate(var(--rotate)) translateX(-44px);
+      }
+    }
+
+    will-change: transform;
+
+    transform: rotate(var(--rotate)) translateX(-22px);
+
+    padding: 17px 32px;
+
+    font-size: 28px;
+    color: var(--text-color);
+
+    background: var(--background-color);
+    border-radius: 32px;
+  }
+}
+
+.creative-logos {
+  overflow: visible;
+
+  &__grid {
+    @include media(md, min-width) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px 30px;
+
+      max-width: 810px;
+      margin: auto;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+.creative-block {
+  &__title {
+    @include media(md) {
+      font-size: 24px;
+    }
+
+    max-width: 1000px;
+    margin: auto;
+
+    font-size: 48px;
+    line-height: 125%;
+    text-align: center;
+  }
+
+  &__tags {
+    @include media(md, min-width) {
+      transform: translateY(-15px);
+    }
+  }
+
+  &__logos {
+    @include media(md) {
+      margin-top: 48px;
+    }
+
+    margin-top: 65px;
+  }
+}

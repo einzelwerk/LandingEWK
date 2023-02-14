@@ -1,0 +1,39 @@
+@use '../utils/mixins' as *;
+
+.showroom {
+  @include media(md, min-width) {
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    height: 550px;
+    border-radius: 16px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  &__ctr {
+    font-size: 20px;
+    color: var(--accent-color);
+  }
+
+  &__company {
+    display: block;
+    margin-top: 8px;
+    font-weight: 300;
+  }
+}

@@ -20,6 +20,10 @@
   gap: 24px;
 
   &__item {
+    @include media(md) {
+      border-radius: 16px;
+    }
+
     overflow: hidden;
     display: flex;
     flex-direction: column;

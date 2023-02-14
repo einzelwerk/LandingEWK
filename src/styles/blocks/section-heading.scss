@@ -19,6 +19,20 @@
     letter-spacing: -0.03em;
   }
 
+  &__subtitle {
+    @include media(md) {
+      margin-top: 12px;
+      font-size: 16px;
+    }
+
+    margin-top: 16px;
+
+    font-size: 32px;
+    line-height: 125%;
+    color: var(--accent-color);
+    text-align: center;
+  }
+
   &__desc {
     @include media(md) {
       margin-top: 16px;

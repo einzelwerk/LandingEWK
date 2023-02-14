@@ -26,13 +26,14 @@
 
   &__icon {
     @include media(md) {
-      display: none;
+      margin-left: 24px;
     }
   }
 
   &__item {
     @include media(md) {
       margin-bottom: 16px;
+      border-radius: 16px;
     }
 
     margin-bottom: 20px;

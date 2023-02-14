@@ -54,7 +54,34 @@
 </symbol><symbol viewBox="0 0 32 32" fill="none" id="faq_sprite">
 <path d="M21 15L16 20L11 15L11.8875 14.1125L16 18.225L20.1125 14.1125L21 15Z" fill="currentColor" />
 <rect x="0.5" y="31.5" width="31" height="31" rx="15.5" transform="rotate(-90 0.5 31.5)" stroke="currentColor" />
-</symbol><symbol viewBox="0 0 24 24" fill="none" id="share_sprite">
+</symbol><symbol viewBox="0 0 40 40" fill="none" id="off-sound_sprite">
+<rect width="40" height="40" rx="16" fill="white" />
+<g clip-path="url(#off-sound_sprite_clip0_603_2524)">
+<path d="M23.4137 20.4737V17.928C23.4137 15.0779 23.4137 13.6529 22.5808 13.0544C22.4452 12.9569 22.2979 12.8768 22.1423 12.8159C21.1872 12.4423 19.9911 13.2171 17.5991 14.7666L17.2582 14.9874C16.7241 15.3334 16.457 15.5064 16.1693 15.6179C15.846 15.7432 15.5034 15.8116 15.1568 15.8199C14.8483 15.8272 14.5353 15.7699 13.9093 15.6553V15.6553C12.7383 15.441 12.1528 15.3338 11.6893 15.4741C11.1709 15.6311 10.7383 15.9917 10.4905 16.4734C10.269 16.904 10.269 17.4993 10.269 18.6897V20.4737" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+<path d="M23.4137 19.5263V22.072C23.4137 24.9221 23.4137 26.3471 22.5808 26.9456C22.4452 27.0431 22.2979 27.1232 22.1423 27.1841C21.1872 27.5577 19.9911 26.7829 17.5991 25.2334L17.2582 25.0126C16.7241 24.6666 16.457 24.4936 16.1693 24.3821C15.846 24.2568 15.5034 24.1884 15.1568 24.1801C14.8483 24.1728 14.5353 24.2301 13.9093 24.3447V24.3447C12.7383 24.559 12.1528 24.6662 11.6893 24.5259C11.1709 24.3689 10.7383 24.0083 10.4905 23.5266C10.269 23.096 10.269 22.5007 10.269 21.3103V19.5263" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+<path d="M29.2588 14.9136C29.8883 18.1155 29.8883 21.8843 29.2588 25.0862" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+<path d="M26.7866 16.1851C27.4161 18.5865 27.4161 21.4131 26.7866 23.8146" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+<path d="M26.8681 12.6411L12.15 27.3593" stroke="#101010" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<defs>
+
+</defs>
+</symbol><clipPath id="off-sound_sprite_clip0_603_2524">
+<rect width="24" height="24" fill="white" transform="translate(8 8)" />
+</clipPath><symbol viewBox="0 0 40 40" fill="none" id="on-sound_sprite">
+<rect width="40" height="40" rx="16" fill="white" />
+<g clip-path="url(#on-sound_sprite_clip0_603_2513)">
+<path d="M23.905 20.4737V17.928C23.905 15.0779 23.905 13.6529 23.0721 13.0544C22.9365 12.9569 22.7891 12.8768 22.6336 12.8159C21.6784 12.4423 20.4824 13.2171 18.0903 14.7666L17.7495 14.9874C17.2154 15.3334 16.9483 15.5064 16.6606 15.6179C16.3373 15.7432 15.9947 15.8116 15.648 15.8199C15.3396 15.8272 15.0266 15.7699 14.4006 15.6553V15.6553C13.2296 15.441 12.6441 15.3338 12.1806 15.4741C11.6621 15.6311 11.2296 15.9917 10.9818 16.4734C10.7603 16.904 10.7603 17.4993 10.7603 18.6897V20.4737" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+<path d="M23.905 19.5263V22.072C23.905 24.9221 23.905 26.3471 23.0721 26.9456C22.9365 27.0431 22.7891 27.1232 22.6336 27.1841C21.6784 27.5577 20.4824 26.7829 18.0903 25.2334L17.7495 25.0126C17.2154 24.6666 16.9483 24.4936 16.6606 24.3821C16.3373 24.2568 15.9947 24.1884 15.648 24.1801C15.3396 24.1728 15.0266 24.2301 14.4006 24.3447V24.3447C13.2296 24.559 12.6441 24.6662 12.1806 24.5259C11.6621 24.3689 11.2296 24.0083 10.9818 23.5266C10.7603 23.096 10.7603 22.5007 10.7603 21.3103V19.5263" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+<path d="M29.75 14.9136C30.3795 18.1155 30.3795 21.8843 29.75 25.0862" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+<path d="M27.2779 16.1851C27.9074 18.5865 27.9074 21.4131 27.2779 23.8146" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+</g>
+<defs>
+
+</defs>
+</symbol><clipPath id="on-sound_sprite_clip0_603_2513">
+<rect width="24" height="24" fill="white" transform="translate(8 8)" />
+</clipPath><symbol viewBox="0 0 24 24" fill="none" id="share_sprite">
 <g clip-path="url(#share_sprite_clip0_402_12984)">
 <path d="M7.28906 5.79883L11.8727 1.99961L16.4563 5.79883" stroke="#D8D8D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 <path d="M11.873 2.3818L11.873 18" stroke="#D8D8D8" stroke-width="1.5" stroke-linecap="round" />

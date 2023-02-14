@@ -10,6 +10,7 @@
   @include media(md) {
     padding: 30px 20px;
     background-image: url(../assets/images/sale-bg-m.svg);
+    border-radius: 16px;
   }
 
   display: flex;

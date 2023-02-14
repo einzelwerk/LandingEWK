@@ -27,8 +27,13 @@
   <div class="hero">
     <h1 class="hero__title">A set of high-conversion ADS creatives<span class="hero__badge"><span class="hero__price">99$</span><span class="hero__vat">+VAT</span></span></h1>
     <p class="hero__desc">Test ideas and increase conversions, we'll take care of the rest</p>
-    <div class="hero__video-wrapper">
-      <div class="hero__video video"> 
+    <div class="hero__video-wrapper js-toggle-sound">
+      <div class="hero__video video">
+        <button class="video__control-sound js-toggle-sound hidden-desktop">
+          <svg width="40" height="40">
+            <use href="sprite.svg#on-sound_sprite"> </use>
+          </svg>
+        </button>
         <video class="video__src" src="https://einzelwerk.ru/assets/images/hero-10215256.mp4" muted playsinline loop autoplay> </video>
       </div>
     </div>
@@ -135,9 +140,39 @@
     <button class="cases-wrapper__purchase btn btn--purchase" type="button" data-modal="purchase-modal"><span class="btn__inner">Get a set of creatives</span></button>
   </div>
 </section>
+<section class="section container"> 
+  <div class="creative-block"> 
+    <h2 class="creative-block__title">Our creatives are already working and showing results in the different business areas</h2>
+    <div class="creative-block__tags creative-tags"> 
+      <div class="creative-tags__line"> 
+        <div class="creative-tags__item" style="--background-color:#e6fe51;--text-color:#1a1a1a;--rotate:-3deg">restaurant business</div>
+        <div class="creative-tags__item" style="--background-color:#5177FE;--text-color:#fff;--rotate:3deg">training</div>
+        <div class="creative-tags__item" style="--background-color:#F2F2F2;--text-color:#1a1a1a;--rotate:-3deg">interiors</div>
+      </div>
+      <div class="creative-tags__line"> 
+        <div class="creative-tags__item" style="--background-color:#3A3A3A;--text-color:#fff;--rotate:3deg">e-commerce</div>
+        <div class="creative-tags__item" style="--background-color:#37C545;--text-color:#fff;--rotate:-3deg">medicine</div>
+        <div class="creative-tags__item" style="--background-color:#F7953C;--text-color:#fff;--rotate:3deg">entertainment</div>
+      </div>
+    </div>
+    <div class="creative-block__logos creative-logos swiper js-creative-logo">
+      <div class="swiper-wrapper creative-logos__grid">
+        <picture class="creative-logos__image swiper-slide"><img src="assets/images/logos/1.svg" alt=""></picture>
+        <picture class="creative-logos__image swiper-slide"><img src="assets/images/logos/2.svg" alt=""></picture>
+        <picture class="creative-logos__image swiper-slide"><img src="assets/images/logos/3.svg" alt=""></picture>
+        <picture class="creative-logos__image swiper-slide"><img src="assets/images/logos/4.svg" alt=""></picture>
+        <picture class="creative-logos__image swiper-slide"><img src="assets/images/logos/5.svg" alt=""></picture>
+        <picture class="creative-logos__image swiper-slide"><img src="assets/images/logos/6.svg" alt=""></picture>
+        <picture class="creative-logos__image swiper-slide"><img src="assets/images/logos/7.svg" alt=""></picture>
+        <picture class="creative-logos__image swiper-slide"><img src="assets/images/logos/8.svg" alt=""></picture>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section container" id="steps"> 
 <div class="section-heading"> 
   <h2 class="section-heading__title">It's easy to work with us</h2>
+  <h3 class="section-heading__subtitle">It takes 5 days and 25 minutes</h3>
 </div>
   <div class="steps-wrapper"> 
     <div class="steps">
@@ -154,7 +189,7 @@
         </div>
         <h3 class="steps__title">Pay for service</h3>
         <p class="steps__desc">There are only 12 questions in the brief, which will help to clearly formulate the task</p>
-        <picture class="steps__image"><img src="assets/images/steps/1.svg" alt=""></picture>
+        <picture class="steps__image" data-modal="purchase-modal"><img src="assets/images/steps/1.svg" alt=""></picture>
       </div>
       <div class="steps__item"> 
         <div class="steps__heading"> <span class="steps__index">2st Step </span>
@@ -190,38 +225,33 @@
     <button class="steps__purchase btn btn--purchase" data-modal="purchase-modal">Get a set of creatives</button>
   </div>
 </section>
-<section class="section container" id="results">
-  <div class="results"> 
-    <div class="results__col results__col--nav"> 
-      <h3 class="results__title">Some Results</h3>
-      <div class="results-btn-list" role="tablist">
-        <button class="results-btn-list__item" type="button" role="tab" aria-selected="true" aria-controls="results-tabs-1">Online store of pet products</button>
-        <button class="results-btn-list__item" type="button" role="tab" aria-selected="false" aria-controls="results-tabs-2">Childrens Cafe</button>
-        <button class="results-btn-list__item" type="button" role="tab" aria-selected="false" aria-controls="results-tabs-3">Flower Market</button>
-        <button class="results-btn-list__item" type="button" role="tab" aria-selected="false" aria-controls="results-tabs-4">Hamburg Restaurant</button>
-        <button class="results-btn-list__item" type="button" role="tab" aria-selected="false" aria-controls="results-tabs-5">Interior company</button>
+<section class="section"> 
+  <div class="container">
+<div class="section-heading"> 
+  <h2 class="section-heading__title">High CTR Showroom</h2>
+</div>
+  </div>
+  <div class="container-fluid showroom js-showroom-slider swiper">
+    <div class="swiper-wrapper">
+      <div class="showroom__item swiper-slide"> 
+        <picture class="showroom__image"> <img src="assets/images/showroom/1.jpg" alt=""></picture>
+        <div class="showroom__text"><span class="showroom__ctr">CTR 4.33%</span><span class="showroom__company">Pettec Shop</span></div>
       </div>
-    </div>
-    <div class="results__col results__col--content"> 
-      <div class="results__content" id="results-tabs-1" role="tabpanel">
-        <div class="results__badge"> <span class="results__ctr">CTR </span><span class="results__value">3.25%</span></div>
-        <picture class="results__image"> <img src="assets/images/results/1.jpg" alt=""></picture>
+      <div class="showroom__item swiper-slide"> 
+        <picture class="showroom__image"> <img src="assets/images/showroom/2.jpg" alt=""></picture>
+        <div class="showroom__text"><span class="showroom__ctr">CTR 4.33%</span><span class="showroom__company">Pettec Shop</span></div>
       </div>
-      <div class="results__content" id="results-tabs-2" role="tabpanel">
-        <div class="results__badge"> <span class="results__ctr">CTR </span><span class="results__value">3.26%</span></div>
-        <picture class="results__image"> <img src="assets/images/results/1.jpg" alt=""></picture>
+      <div class="showroom__item swiper-slide"> 
+        <picture class="showroom__image"> <img src="assets/images/showroom/3.jpg" alt=""></picture>
+        <div class="showroom__text"><span class="showroom__ctr">CTR 4.33%</span><span class="showroom__company">Pettec Shop</span></div>
       </div>
-      <div class="results__content" id="results-tabs-3" role="tabpanel">
-        <div class="results__badge"> <span class="results__ctr">CTR </span><span class="results__value">3.27%</span></div>
-        <picture class="results__image"> <img src="assets/images/results/1.jpg" alt=""></picture>
+      <div class="showroom__item swiper-slide"> 
+        <picture class="showroom__image"> <img src="assets/images/showroom/4.jpg" alt=""></picture>
+        <div class="showroom__text"><span class="showroom__ctr">CTR 4.33%</span><span class="showroom__company">Pettec Shop</span></div>
       </div>
-      <div class="results__content" id="results-tabs-4" role="tabpanel">
-        <div class="results__badge"> <span class="results__ctr">CTR </span><span class="results__value">3.28%</span></div>
-        <picture class="results__image"> <img src="assets/images/results/1.jpg" alt=""></picture>
-      </div>
-      <div class="results__content" id="results-tabs-5" role="tabpanel">
-        <div class="results__badge"> <span class="results__ctr">CTR </span><span class="results__value">3.29%</span></div>
-        <picture class="results__image"> <img src="assets/images/results/1.jpg" alt=""></picture>
+      <div class="showroom__item swiper-slide"> 
+        <picture class="showroom__image"> <img src="assets/images/showroom/5.jpg" alt=""></picture>
+        <div class="showroom__text"><span class="showroom__ctr">CTR 4.33%</span><span class="showroom__company">Pettec Shop</span></div>
       </div>
     </div>
   </div>

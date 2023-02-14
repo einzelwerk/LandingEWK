@@ -1,5 +1,6 @@
 section.section.container#steps 
   - locals.sectionTitle = "It's easy to work with us"
+  - locals.sectionSubtitle = 'It takes 5 days and 25 minutes'
   - locals.sectionDesc = null
   include ../blocks/section-heading
   .steps-wrapper 
@@ -14,7 +15,7 @@ section.section.container#steps
             .steps__duration-text 5 min
         h3.steps__title Pay for service
         p.steps__desc There are only 12 questions in the brief, which will help to clearly formulate the task
-        picture.steps__image
+        picture.steps__image(data-modal="purchase-modal")
           img(src=require('@/images/steps/1.svg'), alt="")
       .steps__item 
         .steps__heading 

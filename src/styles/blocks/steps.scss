@@ -12,6 +12,7 @@
   &__item {
     @include media(md) {
       padding: 20px;
+      border-radius: 16px;
     }
 
     padding: 30px;

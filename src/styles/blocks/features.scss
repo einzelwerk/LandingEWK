@@ -22,6 +22,10 @@
   }
 
   &__image {
+    @include media(md) {
+      border-radius: 16px;
+    }
+
     position: relative;
 
     overflow: hidden;

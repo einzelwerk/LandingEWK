@@ -2,7 +2,6 @@
 
 .video {
   @include media(md) {
-    margin: 0 calc(var(--gap) * -1);
     padding-bottom: 100%;
     border-radius: 16px;
   }
@@ -26,5 +25,12 @@
     height: 100%;
 
     object-fit: cover;
+  }
+
+  &__control-sound {
+    position: absolute;
+    z-index: 1010;
+    right: 20px;
+    bottom: 20px;
   }
 }

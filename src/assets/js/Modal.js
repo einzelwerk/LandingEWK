@@ -59,5 +59,5 @@ timerModal.listener();
 window.addEventListener('load', () => {
   setTimeout(() => {
     timerModal.open();
-  }, 100);
+  }, 10000);
 });

@@ -1,0 +1,17 @@
+section.section.container 
+  .creative-block 
+    h2.creative-block__title Our creatives are already working and showing results in the different business areas
+    .creative-block__tags.creative-tags 
+      .creative-tags__line 
+        .creative-tags__item(style="--background-color:#e6fe51;--text-color:#1a1a1a;--rotate:-3deg") restaurant business
+        .creative-tags__item(style="--background-color:#5177FE;--text-color:#fff;--rotate:3deg") training
+        .creative-tags__item(style="--background-color:#F2F2F2;--text-color:#1a1a1a;--rotate:-3deg") interiors
+      .creative-tags__line 
+        .creative-tags__item(style="--background-color:#3A3A3A;--text-color:#fff;--rotate:3deg") e-commerce
+        .creative-tags__item(style="--background-color:#37C545;--text-color:#fff;--rotate:-3deg") medicine
+        .creative-tags__item(style="--background-color:#F7953C;--text-color:#fff;--rotate:3deg") entertainment
+    .creative-block__logos.creative-logos.swiper.js-creative-logo
+      .swiper-wrapper.creative-logos__grid
+        each val in [1,2,3,4,5,6,7,8]
+          picture.creative-logos__image.swiper-slide
+            img(src=require(`@/images/logos/${val}.svg`), alt="") 
