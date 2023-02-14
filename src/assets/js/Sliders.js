@@ -60,7 +60,6 @@ class Sliders {
           delay: 1,
           disableOnInteraction: false,
         },
-        mousewheelControl: true,
       };
     } else {
       settings = {
@@ -81,7 +80,6 @@ class Sliders {
             translate: ['103%', 0, 0],
           },
         },
-        mousewheelControl: true,
       };
     }
     const root = document.querySelector('.js-showroom-slider');
@@ -109,7 +107,6 @@ class Sliders {
         delay: 1,
         disableOnInteraction: false,
       },
-      mousewheelControl: true,
     });
 
     if (window.matchMedia(breakpoints.isMobile).matches) {

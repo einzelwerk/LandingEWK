@@ -23,6 +23,7 @@
 
   &__image {
     @include media(md) {
+      padding-bottom: calc(220px / 328px * 100%);
       border-radius: 16px;
     }
 
@@ -44,6 +45,14 @@
       height: 100%;
 
       object-fit: cover;
+    }
+  }
+}
+
+.features-wrapper {
+  .custom-slider-pagination {
+    @include media(md) {
+      display: none;
     }
   }
 }

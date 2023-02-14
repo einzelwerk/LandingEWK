@@ -81,7 +81,11 @@
 </defs>
 </symbol><clipPath id="on-sound_sprite_clip0_603_2513">
 <rect width="24" height="24" fill="white" transform="translate(8 8)" />
-</clipPath><symbol viewBox="0 0 24 24" fill="none" id="share_sprite">
+</clipPath><symbol viewBox="0 0 21 20" fill="none" id="plus_sprite">
+<path d="M13.5 10L7.5 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M10.5 13L10.5 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="10.5" cy="10" r="9.25" stroke="white" stroke-width="1.5" />
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="share_sprite">
 <g clip-path="url(#share_sprite_clip0_402_12984)">
 <path d="M7.28906 5.79883L11.8727 1.99961L16.4563 5.79883" stroke="#D8D8D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 <path d="M11.873 2.3818L11.873 18" stroke="#D8D8D8" stroke-width="1.5" stroke-linecap="round" />

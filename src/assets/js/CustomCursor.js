@@ -54,7 +54,7 @@ class CustomCursor {
       if (e.target.closest('.video')) {
         this.showCursor();
         this.setText('+ sound');
-      } else if (e.target.closest('.swiper')) {
+      } else if (e.target.closest('.swiper:not(.creative-logos)')) {
         this.showCursor();
         this.setText(swipeIcon);
       } else {

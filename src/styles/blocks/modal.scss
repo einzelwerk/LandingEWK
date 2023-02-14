@@ -112,6 +112,7 @@
 
     font-size: rem(20px);
     font-weight: 350;
+    line-height: 143%;
     color: var(--gray-300);
     text-align: center;
   }
@@ -231,6 +232,7 @@
 
     .timer-group {
       @include media(md) {
+        margin-top: 10px;
         margin-left: 0;
       }
 
@@ -249,6 +251,11 @@
   }
 
   &__btn {
+    @include media(md) {
+      padding: 10px 32px;
+      font-size: rem(16px);
+    }
+
     margin-top: 32px;
     padding: 25px;
     font-size: rem(20px);

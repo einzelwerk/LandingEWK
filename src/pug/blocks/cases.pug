@@ -10,6 +10,10 @@ section.section.container#cases
             .cases__item
               picture.cases__image
                 img(src=require(`@/images/cases/${val}-${val2}.jpg`), alt="")
-    button.cases-wrapper__purchase.btn.btn--purchase(type="button" data-modal="purchase-modal")
+    button.cases-wrapper__more-btn.hidden-desktop(type="button") 
+      span View more
+      svg(width="20" height="20")
+        use(xlink:href="sprite.svg#plus_sprite") 
+    button.cases-wrapper__purchase.btn.btn--purchase.hidden-mobile(type="button" data-modal="purchase-modal")
       span.btn__inner Get a set of creatives
 
