@@ -4,12 +4,13 @@ section.section(id="results")
     - locals.sectionSubtitle = null;
     - locals.sectionDesc = null
     include ../blocks/section-heading
-  .container-fluid.showroom.js-showroom-slider.swiper
+  .container.showroom.js-showroom-slider.swiper
     .swiper-wrapper
       each val in [1,2,3,4,5]
-        .showroom__item.swiper-slide 
-          picture.showroom__image 
-            img(src=require(`@/images/showroom/${val}.jpg`), alt="")
+        .showroom__item.swiper-slide
+          .showroom__media
+            picture.showroom__media-src
+              img(src=require(`@/images/showroom/${val}.jpg`), alt="")
           .showroom__text
             span.showroom__ctr CTR 4.33%
             span.showroom__company Pettec Shop

@@ -58,7 +58,7 @@ class Sliders {
         spaceBetween: 24,
 
         speed: 3000,
-        slidesPerView: 5,
+        slidesPerView: 4,
         autoplay: {
           enabled: true,
           delay: 1,
