@@ -1,117 +1,100 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable no-new */
 
-class TabsAutomatic {
-  constructor(groupNode) {
-    this.tablistNode = groupNode;
-    this.tabs = Array.from(this.tablistNode.querySelectorAll('[role=tab]'));
+class TabSwitcher {
+  constructor(element) {
+    this.element = element;
+    this.tabs = this.element.querySelectorAll('[role="tab"]');
+    this.panels = this.element.querySelectorAll('[role="tabpanel"]');
+    [this.currentTab] = this.element.querySelectorAll('[role="tab"]');
+    this.onTabSwitchCallback = null;
 
-    this.tabpanels = [];
+    this.init();
+  }
 
-    this.firstTab = null;
-
-    this.lastTab = null;
-
-    this.tabs.forEach((el) => {
-      const tab = el;
-      const tabpanel = document.getElementById(tab.getAttribute('aria-controls'));
-
-      tab.tabIndex = -1;
-      tab.setAttribute('aria-selected', 'false');
-      this.tabpanels.push(tabpanel);
-
-      tab.addEventListener('keydown', this.onKeydown.bind(this));
-      tab.addEventListener('click', this.onClick.bind(this));
-
-      if (!this.firstTab) {
-        this.firstTab = tab;
-      }
-      this.lastTab = tab;
+  init() {
+    // Add click and keydown event listeners to tabs
+    this.tabs.forEach((tab) => {
+      tab.addEventListener('click', () => this.selectTab(tab));
+      tab.addEventListener('keydown', (event) => this.handleTabKeydown(event, tab));
     });
 
-    this.setSelectedTab(this.firstTab, false);
+    // Show initial tab panel
+    this.showPanel(this.currentTab.getAttribute('aria-controls'));
+
+    this.currentTab.style.setProperty('--desc-height', `${this.currentTab.querySelector('.features__description').offsetHeight}px`);
   }
 
-  setSelectedTab(currentTab, setFocus = true) {
-    this.tabs.forEach((el) => {
-      const tab = el;
-      if (currentTab === tab) {
-        tab.setAttribute('aria-selected', 'true');
-        tab.removeAttribute('tabindex');
-        this.tabpanels[this.tabs.indexOf(tab)].classList.remove('is-hidden');
-        if (setFocus) {
-          tab.focus();
-        }
-      } else {
-        tab.setAttribute('aria-selected', 'false');
-        tab.tabIndex = -1;
-        this.tabpanels[this.tabs.indexOf(tab)].classList.add('is-hidden');
-      }
-    });
-  }
-
-  setSelectedToPreviousTab(currentTab) {
-    if (currentTab === this.firstTab) {
-      this.setSelectedTab(this.lastTab);
-    } else {
-      this.setSelectedTab(this.tabs[this.tabs.indexOf(currentTab) - 1]);
+  selectTab(tab) {
+    if (tab !== this.currentTab) {
+      this.hidePanel(this.currentTab.getAttribute('aria-controls'));
+      this.showPanel(tab.getAttribute('aria-controls'));
+      this.currentTab.setAttribute('aria-selected', false);
+      this.currentTab.removeAttribute('tabindex');
+      tab.setAttribute('aria-selected', true);
+      tab.setAttribute('tabindex', 0);
+      this.currentTab = tab;
+    }
+    if (typeof this.onTabSwitchCallback === 'function') {
+      this.onTabSwitchCallback(this.currentTab);
     }
   }
 
-  setSelectedToNextTab(currentTab) {
-    if (currentTab === this.lastTab) {
-      this.setSelectedTab(this.firstTab);
-    } else {
-      this.setSelectedTab(this.tabs[this.tabs.indexOf(currentTab) + 1]);
-    }
-  }
+  handleTabKeydown(event, tab) {
+    const { key } = event;
+    const index = Array.from(this.tabs).indexOf(tab);
 
-  /* EVENT HANDLERS */
-
-  onKeydown(event) {
-    const tgt = event.currentTarget;
-    let flag = false;
-
-    switch (event.key) {
-      case 'ArrowLeft':
-        this.setSelectedToPreviousTab(tgt);
-        flag = true;
-        break;
-
-      case 'ArrowRight':
-        this.setSelectedToNextTab(tgt);
-        flag = true;
-        break;
-
-      case 'Home':
-        this.setSelectedTab(this.firstTab);
-        flag = true;
-        break;
-
-      case 'End':
-        this.setSelectedTab(this.lastTab);
-        flag = true;
-        break;
-
-      default:
-        break;
-    }
-
-    if (flag) {
-      event.stopPropagation();
+    if (key === 'ArrowLeft' || (key === 'ArrowUp' && index > 0)) {
+      this.selectTab(this.tabs[index - 1]);
+      this.currentTab = this.tabs[index - 1];
+      this.currentTab.focus();
+      event.preventDefault();
+    } else if (key === 'ArrowRight' || (key === 'ArrowDown' && index < this.tabs.length - 1)) {
+      this.selectTab(this.tabs[index + 1]);
+      this.currentTab = this.tabs[index + 1];
+      this.currentTab.focus();
+      event.preventDefault();
+    } else if (key === 'Home') {
+      this.selectTab(this.tabs[0]);
+      this.currentTab = this.tabs[0];
+      this.currentTab.focus();
+      event.preventDefault();
+    } else if (key === 'End') {
+      this.selectTab(this.tabs[this.tabs.length - 1]);
+      this.currentTab = this.tabs[this.tabs.length - 1];
+      this.currentTab.focus();
       event.preventDefault();
     }
   }
 
-  onClick(event) {
-    this.setSelectedTab(event.currentTarget);
+  showPanel(id) {
+    const panel = this.element.querySelector(`#${id}`);
+    panel.setAttribute('aria-hidden', false);
+  }
+
+  hidePanel(id) {
+    const panel = this.element.querySelector(`#${id}`);
+    panel.setAttribute('aria-hidden', true);
+  }
+
+  getTab(index) {
+    return this.tabs[index];
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  onTabSwitch(callback) {
+    this.onTabSwitchCallback = callback;
   }
 }
 
-// Initialize tablist
-
-window.addEventListener('load', () => {
-  const categoryTabs = document.querySelectorAll('.results [role=tablist].results-btn-list');
-  for (let i = 0; i < categoryTabs.length; i += 1) {
-    new TabsAutomatic(categoryTabs[i]);
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  const featuresTabs = new TabSwitcher(document.querySelector('.js-features-tab'));
+  featuresTabs.onTabSwitch(() => {
+    const elem = document.querySelector('.features__button[aria-selected="true"]');
+    const height = elem.querySelector('.features__description').offsetHeight;
+    document.querySelectorAll('.features__button').forEach((btn) => {
+      btn.style.setProperty('--desc-height', '0');
+    });
+    elem.style.setProperty('--desc-height', `${height}px`);
+  });
 });

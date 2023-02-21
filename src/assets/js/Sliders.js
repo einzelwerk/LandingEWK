@@ -10,33 +10,11 @@ const defaultOptions = {
 };
 
 class Sliders {
-  static featuresSlider() {
-    const root = document.querySelector('.features-wrapper');
-    const sliderInstance = new Swiper(root, {
-      ...defaultOptions,
-      modules: [Pagination, Autoplay],
-      init: false,
-      slidesPerView: 1,
-      spaceBetween: 16,
-      speed: 1500,
-      autoplay: {
-        delay: 4000,
-      },
-      pagination: {
-        el: root.querySelector('.custom-slider-pagination'),
-        type: 'bullets',
-      },
-    });
-    if (window.matchMedia(breakpoints.isDesktop).matches) {
-      sliderInstance.init();
-    }
-  }
-
   static reviewsSlider() {
     const root = document.querySelector('.reviews-wrapper');
     const sliderInstance = new Swiper(root, {
       ...defaultOptions,
-      modules: [Pagination],
+      modules: [Pagination, FreeMode],
       init: false,
       slidesPerView: 1,
       spaceBetween: 16,
@@ -53,12 +31,19 @@ class Sliders {
     let settings;
     if (window.matchMedia(breakpoints.isDesktop).matches) {
       settings = {
-        modules: [Autoplay],
+        modules: [Autoplay, FreeMode],
         loop: true,
+        loopedSlides: 30,
+        freeMode: true,
         spaceBetween: 24,
 
-        speed: 3000,
-        slidesPerView: 4,
+        speed: 8000,
+        slidesPerView: 4.2,
+        breakpoints: {
+          1720: {
+            slidesPerView: 6.2,
+          },
+        },
         autoplay: {
           enabled: true,
           delay: 1,
@@ -119,7 +104,6 @@ class Sliders {
 }
 
 function slidersInit() {
-  Sliders.featuresSlider();
   Sliders.reviewsSlider();
   Sliders.showroomSlider();
   Sliders.creativeLogoSlider();

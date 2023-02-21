@@ -1,29 +1,28 @@
 section.section.container 
-  .features-wrapper.swiper
-    .features.swiper-wrapper 
-      .features__item.swiper-slide 
-        - locals.sectionTitle = "Save time on processes"
-        - locals.sectionDesc = "Don't waste time with long discussions and approvals. Describe your ideas and put them to work."
-        include ../blocks/section-heading
-        picture.features__image
-          img(src=require('@/images/features/1.jpg'), alt="")
-      .features__item.swiper-slide 
-        - locals.sectionTitle = "Quickly test hypotheses"
-        - locals.sectionDesc = "Don't waste time with long discussions and approvals. Describe your ideas and put them to work."
-        include ../blocks/section-heading
-        picture.features__image
-          img(src=require('@/images/features/2.jpg'), alt="")
-      .features__item.swiper-slide 
-        - locals.sectionTitle = "Creatives based on analysis"
-        - locals.sectionDesc = "Don't waste time with long discussions and approvals. Describe your ideas and put them to work."
-        include ../blocks/section-heading
-        picture.features__image
-          img(src=require('@/images/features/3.jpg'), alt="")
-      .features__item.swiper-slide 
-        - locals.sectionTitle = "Increase conversion rates"
-        - locals.sectionDesc = "Don't waste time with long discussions and approvals. Describe your ideas and put them to work."
-        include ../blocks/section-heading
-        picture.features__image
-          img(src=require('@/images/features/4.jpg'), alt="")
-    .custom-slider-pagination   
+  .features.js-features-tab
+    .features__control
+      each val in [1,2,3,4]
+        button.features__button(type="button" role='tab' aria-selected=val == 1 ? 'true' : 'false' aria-controls=`features-tab-${val}` tabindex="0")
+          .features__icon
+            svg(width ="40" height="40")
+              use(xlink:href="sprite.svg#features_sprite") 
+
+          .features__text
+            h2.features__heading Save time on processes
+            .features__description-wrapper 
+              .features__description
+                p.features__description-text  Don't waste time with long discussions and approvals. Describe your ideas and put them to work.
+                picture.features__image-mobile.hidden-desktop
+                  img(src=require('@/images/features/1.jpg'), alt="")
+    .features__content(role="tablist")
+      picture.features__tab.features__image(role="tabpanel" aria-expanded="true" aria-hidden="false" id="features-tab-1")
+        img(src=require('@/images/features/1.jpg'), alt="")
+      picture.features__tab.features__image(role="tabpanel" aria-expanded="false" aria-hidden="true" id="features-tab-2")
+        img(src=require('@/images/features/1.jpg'), alt="")
+      picture.features__tab.features__image(role="tabpanel" aria-expanded="false" aria-hidden="true" id="features-tab-3")
+        img(src=require('@/images/features/1.jpg'), alt="")
+      picture.features__tab.features__image(role="tabpanel" aria-expanded="false" aria-hidden="true" id="features-tab-4")
+        img(src=require('@/images/features/1.jpg'), alt="")
+
+
 

@@ -1,12 +1,12 @@
 section.section(id="results")
   .container
-    - locals.sectionTitle = "High CTR Showroom"
-    - locals.sectionSubtitle = null;
+    - locals.sectionTitle = "Top-Performing Ads"
+    - locals.sectionSubtitle = 'See Our Impressive CTR Results!';
     - locals.sectionDesc = null
     include ../blocks/section-heading
-  .container.showroom.js-showroom-slider.swiper
+  .showroom.js-showroom-slider.swiper
     .swiper-wrapper
-      each val in [1,2,3,4,5]
+      each val in [1,2,3,4,5,6]
         .showroom__item.swiper-slide
           .showroom__media
             picture.showroom__media-src

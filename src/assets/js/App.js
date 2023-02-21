@@ -6,3 +6,5 @@ import './Video';
 import './Modal';
 import './Archon';
 import './ShowCases';
+import './Infobox';
+import './Init';

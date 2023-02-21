@@ -48,6 +48,11 @@ class Modal {
         this.open();
       }
     });
+    document.addEventListener('keyup', (e) => {
+      if (this.state && e.key === 'Escape') {
+        this.close();
+      }
+    });
   }
 }
 

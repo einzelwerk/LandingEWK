@@ -4,7 +4,7 @@
   --container: 1720px;
   --gap: 30px;
   --gap-y: 100px;
-  --small-gap-y: 80px;
+  --gap-y-s: 80px;
   @each $breakpoint, $val in $breakpoints {
     @include media($breakpoint) {
       @if $val == 1440px {
@@ -23,7 +23,7 @@
   @include media(md) {
     --gap: 16px;
     --gap-y: 50px;
-    --small-gap-y: 40px;
+    --gap-y-s: 40px;
   }
 }
 
@@ -41,4 +41,5 @@
   --gray-700: #595959;
   --gray-800: #3a3a3a;
   --gray-900: #1a1a1a;
+  --gray-1000: #272727;
 }

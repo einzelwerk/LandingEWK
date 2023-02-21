@@ -83,3 +83,135 @@
     margin-top: 80px;
   }
 }
+
+.hero-secondary {
+  @include media(md) {
+    grid-template-columns: 1fr;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+
+  &__title {
+    @include media(md) {
+      margin-bottom: 20px;
+      font-size: rem(32px);
+    }
+
+    @include media(xl) {
+      font-size: rem(40px);
+    }
+
+    position: relative;
+
+    max-width: 983px;
+    margin: auto;
+    margin-bottom: 32px;
+
+    font-size: rem(60px);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+  }
+
+  &__desc {
+    font-size: rem(24px);
+    font-weight: 300;
+    line-height: 133%;
+    color: var(--gray-300);
+  }
+
+  &__video-wrapper {
+    position: relative;
+  }
+
+  &__price {
+    @include media(md) {
+      top: 0;
+      left: 20px;
+      transform: translate(0, -50%) rotate(-15deg);
+
+      width: 75px;
+      height: 75px;
+
+      font-size: rem(22px);
+    }
+
+    position: absolute;
+    z-index: 10;
+    top: 70px;
+    left: 0;
+    transform: translateX(-50%) rotate(-15deg);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 140px;
+    height: 140px;
+
+    font-size: rem(38px);
+    color: var(--gray-900);
+
+    background: var(--accent-color);
+    border-radius: 50%;
+  }
+
+  &__vat {
+    @include media(md) {
+      font-size: rem(10px);
+    }
+
+    font-size: 1rem;
+  }
+
+  &__btn {
+    margin-top: 60px;
+    padding: 25px 40px;
+    font-size: rem(20px);
+    border-radius: 24px;
+  }
+
+  &__badge {
+    @include media(md) {
+      width: 77px;
+      height: 77px;
+      font-size: rem(22px);
+      line-height: 1;
+    }
+
+    position: absolute;
+    right: 10%;
+    transform: translateY(-16%) rotate(-15deg);
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 140px;
+    height: 140px;
+
+    font-size: rem(37px);
+    color: var(--background-color);
+
+    background: var(--accent-color);
+    border-radius: 50%;
+  }
+
+  &__price {
+    line-height: 125%;
+  }
+
+  &__vat {
+    @include media(md) {
+      font-size: rem(10px);
+      line-height: 1;
+    }
+
+    font-size: rem(16px);
+    line-height: 150%;
+  }
+}

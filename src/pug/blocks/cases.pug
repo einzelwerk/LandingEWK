@@ -8,8 +8,11 @@ section.section.container#cases
         .cases__col
           each val2 in [1,2,3,4]
             .cases__item
-              picture.cases__image
-                img(src=require(`@/images/cases/${val}-${val2}.jpg`), alt="")
+              if val2 == 3
+                video.cases__media(src=require(`@/images/video/${Math.floor(Math.random() * 3)}.mp4`) autoplay muted playsinline loop)
+              else
+                picture.cases__media
+                  img(src=require(`@/images/cases/${val}-${val2}.jpg`), alt="")
     button.cases-wrapper__more-btn.hidden-desktop.js-cases-more(type="button") 
       span View more
       svg(width="20" height="20")

@@ -39,7 +39,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'assets/[name].js',
+    filename: 'assets/js/[name].js',
     assetModuleFilename: (pathData) => {
       const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');
       return `${filepath}/[name][ext][query]`;
