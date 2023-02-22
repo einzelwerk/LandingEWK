@@ -6,6 +6,44 @@
   text-align: center;
   transition: background 0.5s;
 
+  &__price {
+    @include media(md) {
+      position: relative;
+      transform: none;
+
+      width: 80px;
+      height: 80px;
+      margin: -30px 0 -30px 16px;
+    }
+
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: rotate(-15deg);
+    transform: translateX(85%) translateY(-50%) rotate(-15deg);
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 82px;
+    height: 82px;
+
+    font-size: rem(20px);
+    color: var(--gray-900);
+
+    background: var(--white-color);
+    border-radius: 50%;
+  }
+
+  &__vat {
+    font-size: rem(12px);
+    line-height: 125%;
+    color: var(--gray-500);
+  }
+
   &:hover {
     background: #b0c23a;
   }
@@ -56,22 +94,6 @@
       }
 
       position: relative;
-
-      svg {
-        @include media(md) {
-          position: relative;
-          transform: none;
-
-          width: 80px;
-          height: 80px;
-          margin: -30px 0 -30px 16px;
-        }
-
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateX(85%) translateY(-50%) rotate(-15deg);
-      }
     }
   }
 }
