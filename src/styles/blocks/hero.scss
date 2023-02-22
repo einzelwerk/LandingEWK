@@ -87,6 +87,7 @@
 .hero-secondary {
   @include media(md) {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   display: grid;
@@ -98,6 +99,7 @@
     @include media(md) {
       margin-bottom: 20px;
       font-size: rem(32px);
+      text-align: center;
     }
 
     @include media(xl) {
@@ -116,6 +118,10 @@
   }
 
   &__desc {
+    @include media(md) {
+      text-align: center;
+    }
+
     font-size: rem(24px);
     font-weight: 300;
     line-height: 133%;
@@ -168,6 +174,10 @@
   }
 
   &__btn {
+    @include media(md) {
+      display: none;
+    }
+
     margin-top: 60px;
     padding: 25px 40px;
     font-size: rem(20px);

@@ -80,13 +80,22 @@
   &__btn {
     @include media(md) {
       width: calc(100% - var(--gap) * 2);
-      margin: 0 var(--gap);
     }
 
     @include media(md, min-width) {
+      transform: translateX(-50%) translateY(calc(100% + 16px));
+
       padding: 25px 60px;
+
       font-size: rem(20px);
+
       border-radius: 24px;
+
+      transition: transform 0.25s ease-in-out;
+
+      &.show {
+        transform: translateX(-50%) translateY(0%);
+      }
     }
 
     position: fixed;

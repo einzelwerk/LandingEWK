@@ -1,3 +1,4 @@
+import './Init';
 import './Sliders';
 import './Tabs';
 import './Faq';
@@ -7,4 +8,4 @@ import './Modal';
 import './Archon';
 import './ShowCases';
 import './Infobox';
-import './Init';
+import './OnScroll';
