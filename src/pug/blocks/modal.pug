@@ -11,11 +11,12 @@
             span.main-form__label-text Name 
               span *
             input#main-form-name.main-form__input(type="text" placeholder="John Doe")
-        .main-form__item
+        .main-form__item.main-form__item--err-validate
           label.main-form__label(for="main-form-email") 
             span.main-form__label-text E-mail
               span *
             input#main-form-email.main-form__input(type="email" placeholder="example@gmail.com")
+          span.main-form__message An error occured!
         .main-form__item
           label.main-form__label(for="main-form-phone") 
             span.main-form__label-text Phone
