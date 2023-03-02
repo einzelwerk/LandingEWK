@@ -81,6 +81,10 @@
 <path d="M25.5168 38.5399V35.1689H22.1892V38.5399H25.5168Z" fill="#1A1A1A" />
 <path d="M22.1884 38.5399V35.1689H18.8608V38.5399H22.1884Z" fill="#1A1A1A" />
 <path d="M18.8612 38.5399V35.1689H15.5334V38.5399H18.8612Z" fill="#1A1A1A" />
+</symbol><symbol viewBox="0 0 14 14" fill="none" id="minus_sprite">
+<g>
+<path d="M2 7L12 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+</g>
 </symbol><symbol viewBox="0 0 40 40" fill="none" id="off-sound_sprite">
 <rect width="40" height="40" rx="16" fill="white" />
 <g clip-path="url(#off-sound_sprite_clip0_603_2524)">
@@ -108,7 +112,10 @@
 </defs>
 </symbol><clipPath id="on-sound_sprite_clip0_603_2513">
 <rect width="24" height="24" fill="white" transform="translate(8 8)" />
-</clipPath><symbol viewBox="0 0 21 20" fill="none" id="plus_sprite">
+</clipPath><symbol viewBox="0 0 14 14" fill="none" id="plus2_sprite">
+<path d="M2 7L12 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+<path d="M7 2L7 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+</symbol><symbol viewBox="0 0 21 20" fill="none" id="plus_sprite">
 <path d="M13.5 10L7.5 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 <path d="M10.5 13L10.5 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 <circle cx="10.5" cy="10" r="9.25" stroke="white" stroke-width="1.5" />
