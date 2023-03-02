@@ -1,6 +1,9 @@
 @use '../utils/mixins' as *;
 
 .showroom {
+  @include media(md) {
+    margin-left: var(--gap);
+  }
   @include media(md, min-width) {
     .swiper-wrapper {
       transition-timing-function: linear;

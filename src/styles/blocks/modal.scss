@@ -30,6 +30,7 @@
 .modal {
   @include media(md) {
     width: calc(100% - var(--gap) * 2);
+    border-radius: 16px;
   }
 
   position: absolute;
