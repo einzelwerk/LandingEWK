@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "gsap": "npm:@gsap/shockingly@^3.11.4",
+    "simplebar": "^6.2.1",
     "swiper": "^9.0.5"
   }
 }

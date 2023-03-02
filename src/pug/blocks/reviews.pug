@@ -7,15 +7,19 @@ section.section.container
     .reviews.swiper-wrapper
       each val in [1,2,3,4,5,6]
         .reviews__item.swiper-slide
-          .reviews__grade
-            each val in [1,2,3,4,5]
-              .reviews__star
-                img(src=require('@/images/star.svg'), alt="")
           p.reviews__text «Einzelwerk's ADS Creative set was exactly what we needed to take our social media advertising to the next level. The team was professional, responsive, and delivered high-quality creatives.»
-          .reviews__author.reviews-author
-            .reviews-author__image
-              img(src=require('@/images/user.jpg'), alt="")
-            .reviews-author__info
-              .reviews-author__name Stephen Lang 
-              .reviews-author__position CEO, bulthaup Hamburg
+          .reviews__bottom
+            .reviews__author.reviews-author
+              .reviews-author__image
+                img(src=require('@/images/user.jpg'), alt="")
+              .reviews-author__info
+                .reviews-author__name Stephen Lang 
+                .reviews-author__position CEO, bulthaup Hamburg
+            .reviews__grade
+              .reviews__star-wrapper
+                each val in [1,2,3,4,5]
+                  .reviews__star
+                    img(src=require('@/images/star.svg'), alt="")
+              .reviews__company 
+                img(src=require('@/images/reviews-company/1.svg'), alt="")
     .custom-slider-pagination

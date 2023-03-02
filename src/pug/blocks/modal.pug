@@ -1,20 +1,69 @@
 .modal-wrapper(data-modal-el="purchase-modal")
-  .modal.modal-purchase
+  .modal.modal-purchase 
     .modal-purchase__inner
       .modal__close.js-close-modal
         svg(width="26" height="26")
           use(xlink:href="sprite.svg#close_sprite") 
-      h4.modal-purchase__title Select payment method
-      p.modal-purchase__desc Immediately after payment we will send you a link to the brief
-      .modal-purchase__payment.payment-method
-        .payment-method__item 
-          a.payment-method__link(href="")
-            picture.payment-method__image
-              img(src=require('@/images/payment/1.jpg'), alt="") 
-        .payment-method__item 
-          a.payment-method__link(href="")
-            picture.payment-method__image
-              img(src=require('@/images/payment/2.jpg'), alt="") 
+      h4.modal-purchase__title Let’s create
+      .main-form
+        .main-form__item
+          label.main-form__label(for="main-form-name") 
+            span.main-form__label-text Name 
+              span *
+            input#main-form-name.main-form__input(type="text" placeholder="John Doe")
+        .main-form__item
+          label.main-form__label(for="main-form-email") 
+            span.main-form__label-text E-mail
+              span *
+            input#main-form-email.main-form__input(type="email" placeholder="example@gmail.com")
+        .main-form__item
+          label.main-form__label(for="main-form-phone") 
+            span.main-form__label-text Phone
+            input#main-form-phone.main-form__input(type="tel" placeholder="example@gmail.com")
+        .main-form__item
+          label.main-form__label(for="main-form-email") 
+            span.main-form__label-text Name 
+              span *
+            .input-number
+              input#main-form-email.main-form__input(type="number" value="1" min="1" max="15" placeholder="example@gmail.com")
+              .input-number__control 
+                button.js-decrement-number.input-number__btn.input-number__btn--minus(type="button" disabled)
+                  svg(width="14" height="14")
+                    use(xlink:href="sprite.svg#minus_sprite") 
+                button.js-increment-number.input-number__btn.input-number__btn--plus(type="button")
+                  svg(width="14" height="14")
+                    use(xlink:href="sprite.svg#plus2_sprite") 
+        fieldset.main-form__payment.payment-methods 
+          legend.payment-methods__title Payment method
+          .payment-methods__grid 
+            label.payment-methods__item(for="main-form-radio-1") 
+              input(type="radio" name="main-form-radio" id="main-form-radio-1" class="payment-methods__radio" checked)
+              span.payment-methods__radio-fake 
+              picture.payment-methods__logo
+                img(src=require('@/images/payment/1.svg'), alt="")
+            label.payment-methods__item(for="main-form-radio-2") 
+              input(type="radio" name="main-form-radio" id="main-form-radio-2" class="payment-methods__radio")
+              span.payment-methods__radio-fake 
+              picture.payment-methods__logo
+                img(src=require('@/images/payment/2.svg'), alt="")
+        .main-form__checkbox.modal-checkbox 
+          label.modal-checkbox__label(for="modal-form-checkbox") 
+            input.modal-checkbox__input(type="checkbox" id="modal-form-checkbox" checked)
+            span.modal-checkbox__fake-input
+            p.modal-checkbox__desc I want to get notifications via phone (SMS / WhatsApp) or E-mail
+        button.main-form__submit.btn.btn--primary(type="submit")
+          span.btn__inner Purchase now for 238$
+        p.main-form__acceptance By clicking on the 'Purchase Now' button, you agree to our 
+          a(href="") Terms and Conditions
+          |  and 
+          a(href="") Privacy Policy 
+        .main-form__money-back.money-back 
+          picture.money-back__image
+            img(src=require('@/images/money-back.svg'), alt="")
+          .money-back__text 
+            h5.money-back__title Money back guarantee
+            p.money-back__desc If you’re not 100% happy with our service in the first 14 days you can request a refund any time you want.
+
 
 .modal-wrapper(data-modal-el="timer-modal")
   .modal.modal-timer

@@ -61,6 +61,8 @@ purchaseModal.listener();
 const timerModal = new Modal('[data-modal="timer-modal"]', '[data-modal-el="timer-modal"]');
 timerModal.listener();
 
+purchaseModal.open();
+
 window.addEventListener('load', () => {
   setTimeout(() => {
     timerModal.open();

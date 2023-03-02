@@ -9,3 +9,5 @@ import './Archon';
 import './ShowCases';
 import './Infobox';
 import './OnScroll';
+import './InputNumber';
+import './Scrollbar';

@@ -11,7 +11,7 @@ const pagesDir = './src/pug/pages';
 const filenames = fs.readdirSync(pagesDir);
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-const isProd = process.env.NODE_ENV == 'production';
+const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
 
 console.log(process.env.NODE_ENV);
