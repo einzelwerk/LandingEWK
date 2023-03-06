@@ -4,10 +4,12 @@ const decrement = document.querySelector('.js-decrement-number');
 increment.addEventListener('click', (e) => {
   const input = e.currentTarget.closest('.input-number').querySelector('input');
   input.stepUp();
+  input.dispatchEvent(new Event('change'));
 });
 decrement.addEventListener('click', (e) => {
   const input = e.currentTarget.closest('.input-number').querySelector('input');
   input.stepDown();
+  input.dispatchEvent(new Event('change'));
 });
 
 document.addEventListener('click', (e) => {
