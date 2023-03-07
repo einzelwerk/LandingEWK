@@ -20,7 +20,7 @@ class Sliders {
       spaceBetween: 16,
       loop: true,
       pagination: {
-        el: root.querySelector('.custom-slider-pagination'),
+        el: root?.querySelector('.custom-slider-pagination'),
         type: 'bullets',
       },
     });
