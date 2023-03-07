@@ -18,6 +18,7 @@ class Sliders {
       init: false,
       slidesPerView: 1,
       spaceBetween: 16,
+      loop: true,
       pagination: {
         el: root.querySelector('.custom-slider-pagination'),
         type: 'bullets',
