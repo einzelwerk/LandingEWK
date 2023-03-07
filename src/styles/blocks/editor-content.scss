@@ -1,0 +1,98 @@
+@use '../utils/mixins' as *;
+
+.editor-content {
+  @include media(sm) {
+    font-size: rem(16px);
+  }
+
+  max-width: 800px;
+  font-size: rem(20px);
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 500;
+  }
+
+  h2 {
+    @include media(sm) {
+      font-size: rem(32px);
+    }
+
+    margin-bottom: 1rem;
+    font-size: rem(48px);
+    font-weight: 500;
+  }
+
+  h3 {
+    @include media(sm) {
+      font-size: rem(32px);
+    }
+    @include media(sm) {
+      font-size: rem(24px);
+    }
+
+    margin-bottom: 1rem;
+    font-size: rem(32px);
+    font-weight: 500;
+  }
+
+  h4 {
+    @include media(sm) {
+      font-size: rem(20px);
+    }
+
+    margin-bottom: 1rem;
+    font-size: rem(24px);
+    font-weight: 500;
+  }
+
+  h5 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  h6 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+
+    font-size: rem(20px);
+    font-weight: 300;
+    line-height: 150%;
+
+    opacity: 0.4;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+
+  li {
+    position: relative;
+
+    display: flex;
+
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+
+    opacity: 0.4;
+
+    &::before {
+      content: '-';
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: underline;
+  }
+}

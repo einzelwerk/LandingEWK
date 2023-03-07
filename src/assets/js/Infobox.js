@@ -1,4 +1,4 @@
-const infobox = document.querySelectorAll('.buyers-infobox');
+const infobox = [...document.querySelectorAll('.buyers-infobox')].sort(() => Math.random() - 0.5);
 let counter = 0;
 const ticker = setInterval(() => {
   infobox[counter].classList.add('show');
