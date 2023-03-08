@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import Swiper, { FreeMode, Pagination, Autoplay, EffectCreative } from 'swiper';
+import Swiper, { FreeMode, Pagination, Autoplay, EffectCreative, Mousewheel } from 'swiper';
 import 'swiper/scss';
 import breakpoints from './MatchMedia';
 
@@ -14,7 +14,7 @@ class Sliders {
     const root = document.querySelector('.reviews-wrapper');
     const sliderInstance = new Swiper(root, {
       ...defaultOptions,
-      modules: [Pagination, FreeMode],
+      modules: [Pagination, FreeMode, Mousewheel],
       init: false,
       slidesPerView: 1,
       spaceBetween: 16,
@@ -32,7 +32,7 @@ class Sliders {
     let settings;
     if (window.matchMedia(breakpoints.isDesktop).matches) {
       settings = {
-        modules: [Autoplay, FreeMode],
+        modules: [Autoplay, FreeMode, Mousewheel],
         loop: true,
         loopedSlides: 30,
         freeMode: true,
