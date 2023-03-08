@@ -4,6 +4,11 @@
   @include media(md) {
     margin-left: var(--gap);
   }
+  @include media(md, min-width) {
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+  }
 
   &__item {
     user-select: none;

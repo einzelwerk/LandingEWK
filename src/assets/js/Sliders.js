@@ -36,12 +36,12 @@ class Sliders {
           loop: true,
 
           spaceBetween: 24,
-          freeMode: true,
+
           slidesPerView: 4,
-          speed: 8000,
+
           autoplay: {
             enabled: true,
-            delay: 1,
+            delay: 1000,
             disableOnInteraction: false,
           },
           breakpoints: {
