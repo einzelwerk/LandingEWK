@@ -69,6 +69,7 @@ const timerModalTimeout = () => {
   setTimeout(() => {
     if (!purchaseModal.isOpen()) {
       timerModal.open();
+      clearTimeout(timerModalTimeout);
     } else {
       timerModalTimeout();
     }

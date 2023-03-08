@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import Swiper, { FreeMode, Pagination, Autoplay, EffectCreative, Mousewheel } from 'swiper';
-import 'swiper/scss';
+import 'swiper/css';
+
 import breakpoints from './MatchMedia';
 
 const defaultOptions = {
@@ -14,7 +15,7 @@ class Sliders {
     const root = document.querySelector('.reviews-wrapper');
     const sliderInstance = new Swiper(root, {
       ...defaultOptions,
-      modules: [Pagination, FreeMode, Mousewheel],
+      modules: [Pagination, FreeMode],
       init: false,
       slidesPerView: 1,
       spaceBetween: 16,
@@ -29,52 +30,47 @@ class Sliders {
   }
 
   static showroomSlider() {
-    let settings;
-    if (window.matchMedia(breakpoints.isDesktop).matches) {
-      settings = {
-        modules: [Autoplay, FreeMode, Mousewheel],
-        loop: true,
-        loopedSlides: 30,
-        freeMode: true,
-        spaceBetween: 24,
-
-        speed: 8000,
-        slidesPerView: 4.2,
-        breakpoints: {
-          1720: {
-            slidesPerView: 6.2,
+    const settings = window.matchMedia(breakpoints.isDesktop).matches
+      ? {
+          modules: [Autoplay, FreeMode, Mousewheel],
+          loop: true,
+          spaceBetween: 24,
+          loopedSlides: 30,
+          loopPreventsSliding: false,
+          freeMode: true,
+          slidesPerView: 4.2,
+          speed: 8000,
+          autoplay: {
+            enabled: true,
+            delay: 1,
+            disableOnInteraction: false,
           },
-        },
-        autoplay: {
-          enabled: true,
-          delay: 1,
-          disableOnInteraction: false,
-        },
-      };
-    } else {
-      settings = {
-        modules: [EffectCreative],
-        init: false,
-
-        slidesPerView: 1.1,
-
-        spaceBetween: 24,
-        effect: 'creative',
-        creativeEffect: {
-          prev: {
-            translate: ['-10%', 0, -1],
-            scale: 0.7,
+          breakpoints: {
+            1720: {
+              slidesPerView: 6.2,
+            },
           },
-          next: {
-            translate: ['103%', 0, 0],
+        }
+      : {
+          modules: [EffectCreative],
+          slidesPerView: 1.1,
+          spaceBetween: 24,
+          effect: 'creative',
+          creativeEffect: {
+            prev: {
+              translate: ['-10%', 0, -1],
+              scale: 0.7,
+            },
+            next: {
+              translate: ['103%', 0, 0],
+            },
           },
-        },
-      };
-    }
+        };
+
     const root = document.querySelector('.js-showroom-slider');
     const sliderInstance = new Swiper(root, {
-      ...defaultOptions,
       ...settings,
+      ...defaultOptions,
     });
 
     sliderInstance.init();
