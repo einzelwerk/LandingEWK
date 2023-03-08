@@ -34,11 +34,10 @@ class Sliders {
       ? {
           modules: [Autoplay, FreeMode, Mousewheel],
           loop: true,
+
           spaceBetween: 24,
-          loopedSlides: 30,
-          loopPreventsSliding: false,
           freeMode: true,
-          slidesPerView: 4.2,
+          slidesPerView: 4,
           speed: 8000,
           autoplay: {
             enabled: true,
@@ -47,7 +46,7 @@ class Sliders {
           },
           breakpoints: {
             1720: {
-              slidesPerView: 6.2,
+              slidesPerView: 6,
             },
           },
         }
