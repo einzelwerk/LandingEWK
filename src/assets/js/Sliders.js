@@ -15,10 +15,13 @@ class Sliders {
     const root = document.querySelector('.reviews-wrapper');
     const sliderInstance = new Swiper(root, {
       ...defaultOptions,
-      modules: [Pagination, FreeMode],
+      modules: [Pagination, FreeMode, Mousewheel],
       init: false,
       slidesPerView: 1,
       spaceBetween: 16,
+      mousewheel: {
+        forceToAxis: true,
+      },
       loop: true,
       pagination: {
         el: root?.querySelector('.custom-slider-pagination'),
