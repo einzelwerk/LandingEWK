@@ -39,6 +39,10 @@ class Modal {
     this.state = false;
   }
 
+  isOpen() {
+    return this.state;
+  }
+
   listener() {
     document.addEventListener('click', (e) => {
       if ((this.state && !e.target.closest('.modal')) || (this.state && e.target.closest(this.closeBtn))) {
@@ -61,8 +65,16 @@ purchaseModal.listener();
 const timerModal = new Modal('[data-modal="timer-modal"]', '[data-modal-el="timer-modal"]');
 timerModal.listener();
 
-window.addEventListener('load', () => {
+const timerModalTimeout = () => {
   setTimeout(() => {
-    timerModal.open();
+    if (!purchaseModal.isOpen()) {
+      timerModal.open();
+    } else {
+      timerModalTimeout();
+    }
   }, 10000);
+};
+
+window.addEventListener('load', () => {
+  timerModalTimeout();
 });
