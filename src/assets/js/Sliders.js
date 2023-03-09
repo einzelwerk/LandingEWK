@@ -21,6 +21,7 @@ class Sliders {
       spaceBetween: 16,
       mousewheel: {
         forceToAxis: true,
+        sensitivity: 0.3,
       },
       loop: true,
       pagination: {
