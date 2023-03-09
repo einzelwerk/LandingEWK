@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <script defer src="assets/js/main.js"></script><link href="assets/css/main.css" rel="stylesheet"></head>
+  <body>
+    <div class="root">
+<header class="header">
+  <div class="header__inner container"> 
+    <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div><a class="header__btn btn btn--secondary" href="/"><span class="btn__inner">Back to site</span></a>
+  </div>
+</header>
+      <main class="main">
+        <section class="container">
+          <div class="error404"> 
+            <picture class="error404__image"> <img src="assets/images/404.svg" alt=""></picture>
+            <h1 class="error404__title">Oops... Page not found</h1><a class="error404__btn btn btn--primary" href="">Back to best creatives</a>
+          </div>
+        </section>
+      </main>
+<footer class="footer footer-secondary">
+  <div class="footer__inner container">
+    <nav class="footer__nav">
+      <ul class="footer__nav-list"> 
+        <li class="footer__nav-item"> <a class="footer__nav-link" href="">Terms of Service</a></li>
+        <li class="footer__nav-item"> <a class="footer__nav-link" href="">Privacy Policy</a></li>
+      </ul>
+    </nav>
+    <div class="footer__right"><span class="footer__copyright">2023. © All rights reserved.</span><a class="footer__madein" href="https://www.einzelwerk.pro/" target="_blank">by Einzelwerk</a></div>
+  </div>
+</footer>
+<div class="modal-wrapper" data-modal-el="purchase-modal">
+  <div class="modal modal-purchase"> 
+    <div class="modal-purchase__inner">
+      <div class="modal__close js-close-modal">
+        <svg width="26" height="26">
+          <use xlink:href="sprite.svg#close_sprite"> </use>
+        </svg>
+      </div>
+      <h4 class="modal-purchase__title">Let’s create</h4>
+      <div class="main-form">
+        <div class="main-form__item">
+          <label class="main-form__label" for="main-form-name"> <span class="main-form__label-text">Name <span>*</span></span>
+            <input class="main-form__input" id="main-form-name" type="text" placeholder="John Doe">
+          </label>
+        </div>
+        <div class="main-form__item main-form__item--err-validate">
+          <label class="main-form__label" for="main-form-email"> <span class="main-form__label-text">E-mail<span>*</span></span>
+            <input class="main-form__input" id="main-form-email" type="email" placeholder="example@gmail.com">
+          </label><span class="main-form__message">An error occured!</span>
+        </div>
+        <div class="main-form__item">
+          <label class="main-form__label" for="main-form-phone"> <span class="main-form__label-text">Phone</span>
+            <input class="main-form__input" id="main-form-phone" type="tel" placeholder="example@gmail.com">
+          </label>
+        </div>
+        <div class="main-form__item">
+          <label class="main-form__label" for="main-form-email"> <span class="main-form__label-text">Name <span>*</span></span>
+            <div class="input-number">
+              <input class="main-form__input" id="main-form-email" type="number" value="1" min="1" max="15" placeholder="example@gmail.com">
+              <div class="input-number__control"> 
+                <button class="js-decrement-number input-number__btn input-number__btn--minus" type="button" disabled>
+                  <svg width="14" height="14">
+                    <use xlink:href="sprite.svg#minus_sprite"> </use>
+                  </svg>
+                </button>
+                <button class="js-increment-number input-number__btn input-number__btn--plus" type="button">
+                  <svg width="14" height="14">
+                    <use xlink:href="sprite.svg#plus2_sprite"> </use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </label>
+        </div>
+        <fieldset class="main-form__payment payment-methods"> 
+          <legend class="payment-methods__title">Payment method</legend>
+          <div class="payment-methods__grid"> 
+            <label class="payment-methods__item" for="main-form-radio-1"> 
+              <input class="payment-methods__radio" type="radio" name="main-form-radio" id="main-form-radio-1" checked><span class="payment-methods__radio-fake"> </span>
+              <picture class="payment-methods__logo"><img src="assets/images/payment/1.svg" alt=""></picture>
+            </label>
+            <label class="payment-methods__item" for="main-form-radio-2"> 
+              <input class="payment-methods__radio" type="radio" name="main-form-radio" id="main-form-radio-2"><span class="payment-methods__radio-fake"> </span>
+              <picture class="payment-methods__logo"><img src="assets/images/payment/2.svg" alt=""></picture>
+            </label>
+          </div>
+        </fieldset>
+        <div class="main-form__checkbox modal-checkbox"> 
+          <label class="modal-checkbox__label" for="modal-form-checkbox"> 
+            <input class="modal-checkbox__input" type="checkbox" id="modal-form-checkbox" checked><span class="modal-checkbox__fake-input"></span>
+            <p class="modal-checkbox__desc">I want to get notifications via phone (SMS / WhatsApp) or E-mail</p>
+          </label>
+        </div>
+        <button class="main-form__submit btn btn--primary" type="submit"><span class="btn__inner">Purchase now for 238$</span></button>
+        <p class="main-form__acceptance">By clicking on the 'Purchase Now' button, you agree to our <a href="">Terms and Conditions</a> and <a href="">Privacy Policy </a></p>
+        <div class="main-form__money-back money-back"> 
+          <picture class="money-back__image"><img src="assets/images/money-back.svg" alt=""></picture>
+          <div class="money-back__text"> 
+            <h5 class="money-back__title">Money back guarantee</h5>
+            <p class="money-back__desc">If you’re not 100% happy with our service in the first 14 days you can request a refund any time you want.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-wrapper" data-modal-el="timer-modal">
+  <div class="modal modal-timer">
+    <div class="modal-timer__inner">
+      <div class="modal-timer__close js-close-modal modal__close">
+        <svg width="26" height="26">
+          <use xlink:href="sprite.svg#close_sprite"> </use>
+        </svg>
+      </div>
+      <h4 class="modal-timer__title">You can get 12 creatives in 3 different designs at a discount</h4>
+      <picture class="modal-timer__image">
+        <source media="(max-width:1024px)" srcset="assets/images/modal-timer-m.png"><img src="assets/images/modal-timer.png" alt="">
+      </picture>
+      <div class="modal-timer__valid">valid for 
+        <div class="modal-timer__timer-group timer-group">
+          <div class="timer-group__item timer-group__days">3 days</div>
+          <div class="timer-group__item timer-group__hours">5 hours</div>
+          <div class="timer-group__item timer-group__minutes">18 minutes</div>
+        </div>
+      </div>
+      <div class="modal-timer__btn btn btn--primary js-close-modal" data-modal="purchase-modal"><span class="btn__inner">Get a set of creatives</span></div>
+    </div>
+  </div>
+</div>
+    </div>
+  </body>
+</html>
