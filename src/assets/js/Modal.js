@@ -73,7 +73,7 @@ const timerModalTimeout = () => {
     } else {
       timerModalTimeout();
     }
-  }, 10000);
+  }, 25000);
 };
 
 window.addEventListener('load', () => {
