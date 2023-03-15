@@ -5,7 +5,7 @@
         svg(width="26" height="26")
           use(xlink:href="sprite.svg#close_sprite") 
       h4.modal-purchase__title Let’s create
-      .main-form
+      .main-form.processing
         .main-form__item
           label.main-form__label(for="main-form-name") 
             span.main-form__label-text Name 
@@ -54,6 +54,8 @@
             p.modal-checkbox__desc I want to get notifications via phone (SMS / WhatsApp) or E-mail
         button.main-form__submit.btn.btn--primary(type="submit")
           span.btn__inner Purchase now for 238$
+          span.main-form__loader.loader
+            span.loader__inner
         p.main-form__acceptance By clicking on the 'Purchase Now' button, you agree to our 
           a(href="") Terms and Conditions
           |  and 

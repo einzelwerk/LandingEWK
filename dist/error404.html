@@ -33,76 +33,108 @@
   </div>
 </footer>
 <div class="modal-wrapper" data-modal-el="purchase-modal">
-  <div class="modal modal-purchase"> 
-    <div class="modal-purchase__inner">
-      <div class="modal__close js-close-modal">
+  <div class="modal modal-purchase">
+    <div class="modal-purchase__container">
+      <div class="modal__close modal-purchase__close js-close-modal">
         <svg width="26" height="26">
-          <use xlink:href="sprite.svg#close_sprite"> </use>
+          <use xlink:href="sprite.svg#close-white_sprite"> </use>
         </svg>
       </div>
-      <h4 class="modal-purchase__title">Let’s create</h4>
-      <div class="main-form processing">
-        <div class="main-form__item">
-          <label class="main-form__label" for="main-form-name"> <span class="main-form__label-text">Name <span>*</span></span>
-            <input class="main-form__input" id="main-form-name" type="text" placeholder="John Doe">
-          </label>
-        </div>
-        <div class="main-form__item main-form__item--err-validate">
-          <label class="main-form__label" for="main-form-email"> <span class="main-form__label-text">E-mail<span>*</span></span>
-            <input class="main-form__input" id="main-form-email" type="email" placeholder="example@gmail.com">
-          </label><span class="main-form__message">An error occured!</span>
-        </div>
-        <div class="main-form__item">
-          <label class="main-form__label" for="main-form-phone"> <span class="main-form__label-text">Phone</span>
-            <input class="main-form__input" id="main-form-phone" type="tel" placeholder="example@gmail.com">
-          </label>
-        </div>
-        <div class="main-form__item">
-          <label class="main-form__label" for="main-form-email"> <span class="main-form__label-text">Name <span>*</span></span>
-            <div class="input-number">
-              <input class="main-form__input" id="main-form-email" type="number" value="1" min="1" max="15" placeholder="example@gmail.com">
-              <div class="input-number__control"> 
-                <button class="js-decrement-number input-number__btn input-number__btn--minus" type="button" disabled>
-                  <svg width="14" height="14">
-                    <use xlink:href="sprite.svg#minus_sprite"> </use>
-                  </svg>
-                </button>
-                <button class="js-increment-number input-number__btn input-number__btn--plus" type="button">
-                  <svg width="14" height="14">
-                    <use xlink:href="sprite.svg#plus2_sprite"> </use>
-                  </svg>
-                </button>
+      <div class="modal-purchase__inner">
+        <h4 class="modal-purchase__title">Let’s create</h4>
+        <div class="manager-mobile hidden-desktop">
+          <div class="manager-mobile__inner">
+            <div class="manager-mobile__top">
+              <picture class="manager-mobile__image"> <img src="assets/images/manager-m.jpg" alt=""></picture>
+              <div class="manager-mobile__info">
+                <h4 class="manager-mobile__name">Andrei Bratuhin</h4>
+                <p class="manager-mobile__position">CEO, Einzelwerk</p>
+              </div>
+              <button class="manager-mobile__btn" type="button" data-trigger="manager">
+                <svg width="24" height="24">
+                  <use xlink:href="sprite.svg#arrow-collapse_sprite"> </use>
+                </svg>
+              </button>
+            </div>
+            <div class="manager-mobile__content" data-target="manager">
+              <div class="modal-contacts"> 
+                <div class="modal-contacts__item"> <span class="modal-contacts__label">Telegram: </span><a class="modal-contacts__link link-hover" href="">@andrei_bratuhin</a></div>
+                <div class="modal-contacts__item"> <span class="modal-contacts__label">WhatsApp: </span><a class="modal-contacts__link link-hover" href="">Send a message</a></div>
+                <div class="modal-contacts__item"> <span class="modal-contacts__label">Phone: </span><a class="modal-contacts__link link-hover" href="">+49 40 228 51 615</a></div>
               </div>
             </div>
-          </label>
+          </div>
         </div>
-        <fieldset class="main-form__payment payment-methods"> 
-          <legend class="payment-methods__title">Payment method</legend>
-          <div class="payment-methods__grid"> 
-            <label class="payment-methods__item" for="main-form-radio-1"> 
-              <input class="payment-methods__radio" type="radio" name="main-form-radio" id="main-form-radio-1" checked><span class="payment-methods__radio-fake"> </span>
-              <picture class="payment-methods__logo"><img src="assets/images/payment/1.svg" alt=""></picture>
-            </label>
-            <label class="payment-methods__item" for="main-form-radio-2"> 
-              <input class="payment-methods__radio" type="radio" name="main-form-radio" id="main-form-radio-2"><span class="payment-methods__radio-fake"> </span>
-              <picture class="payment-methods__logo"><img src="assets/images/payment/2.svg" alt=""></picture>
+        <div class="main-form processing">
+          <div class="main-form__item">
+            <label class="main-form__label" for="main-form-name"> <span class="main-form__label-text">Name <span>*</span></span>
+              <input class="main-form__input" id="main-form-name" type="text" placeholder="John Doe">
             </label>
           </div>
-        </fieldset>
-        <div class="main-form__checkbox modal-checkbox"> 
-          <label class="modal-checkbox__label" for="modal-form-checkbox"> 
-            <input class="modal-checkbox__input" type="checkbox" id="modal-form-checkbox" checked><span class="modal-checkbox__fake-input"></span>
-            <p class="modal-checkbox__desc">I want to get notifications via phone (SMS / WhatsApp) or E-mail</p>
-          </label>
-        </div>
-        <button class="main-form__submit btn btn--primary" type="submit"><span class="btn__inner">Purchase now for 238$</span><span class="main-form__loader loader"><span class="loader__inner"></span></span></button>
-        <p class="main-form__acceptance">By clicking on the 'Purchase Now' button, you agree to our <a href="">Terms and Conditions</a> and <a href="">Privacy Policy </a></p>
-        <div class="main-form__money-back money-back"> 
-          <picture class="money-back__image"><img src="assets/images/money-back.svg" alt=""></picture>
-          <div class="money-back__text"> 
-            <h5 class="money-back__title">Money back guarantee</h5>
-            <p class="money-back__desc">If you’re not 100% happy with our service in the first 14 days you can request a refund any time you want.</p>
+          <div class="main-form__item main-form__item--err-validate">
+            <label class="main-form__label" for="main-form-email"> <span class="main-form__label-text">E-mail<span>*</span></span>
+              <input class="main-form__input" id="main-form-email" type="email" placeholder="example@gmail.com">
+            </label><span class="main-form__message">An error occured!</span>
           </div>
+          <div class="main-form__item">
+            <label class="main-form__label" for="main-form-phone"> <span class="main-form__label-text">Phone</span>
+              <input class="main-form__input" id="main-form-phone" type="tel" placeholder="example@gmail.com">
+            </label>
+          </div>
+          <div class="main-form__item">
+            <label class="main-form__label" for="main-form-email"> <span class="main-form__label-text">Name <span>*</span></span>
+              <div class="input-number">
+                <input class="main-form__input" id="main-form-email" type="number" value="1" min="1" max="15" placeholder="example@gmail.com">
+                <div class="input-number__control"> 
+                  <button class="js-decrement-number input-number__btn input-number__btn--minus" type="button" disabled>
+                    <svg width="14" height="14">
+                      <use xlink:href="sprite.svg#minus_sprite"> </use>
+                    </svg>
+                  </button>
+                  <button class="js-increment-number input-number__btn input-number__btn--plus" type="button">
+                    <svg width="14" height="14">
+                      <use xlink:href="sprite.svg#plus2_sprite"> </use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </label>
+          </div>
+          <fieldset class="main-form__payment payment-methods"> 
+            <legend class="payment-methods__title">Payment method</legend>
+            <div class="payment-methods__grid"> 
+              <label class="payment-methods__item" for="main-form-radio-1"> 
+                <input class="payment-methods__radio" type="radio" name="main-form-radio" id="main-form-radio-1" checked><span class="payment-methods__radio-fake"> </span>
+                <picture class="payment-methods__logo"><img src="assets/images/payment/1.svg" alt=""></picture>
+              </label>
+              <label class="payment-methods__item" for="main-form-radio-2"> 
+                <input class="payment-methods__radio" type="radio" name="main-form-radio" id="main-form-radio-2"><span class="payment-methods__radio-fake"> </span>
+                <picture class="payment-methods__logo"><img src="assets/images/payment/2.svg" alt=""></picture>
+              </label>
+            </div>
+          </fieldset>
+          <div class="main-form__checkbox modal-checkbox"> 
+            <label class="modal-checkbox__label" for="modal-form-checkbox"> 
+              <input class="modal-checkbox__input" type="checkbox" id="modal-form-checkbox" checked><span class="modal-checkbox__fake-input"></span>
+              <p class="modal-checkbox__desc">I want to get notifications via phone (SMS / WhatsApp) or E-mail</p>
+            </label>
+          </div>
+          <button class="main-form__submit btn btn--primary" type="submit"><span class="btn__inner">Purchase now for 238$</span><span class="main-form__loader loader"><span class="loader__inner"></span></span></button>
+          <p class="main-form__acceptance">By clicking on the 'Purchase Now' button, you agree to our <a href="">Terms and Conditions</a> and <a href="">Privacy Policy </a></p>
+        </div>
+      </div>
+      <div class="modal-manager">
+        <picture class="modal-manager__image"><img src="assets/images/modal-a.jpg" alt=""></picture>
+        <h3 class="modal-manager__title">Any Questions?</h3>
+        <p class="modal-manager__subtitle">Feel free to contact us</p>
+        <div class="modal-manager__info"> 
+          <h4 class="modal-manager__name">Andrei Bratuhin</h4>
+          <p class="modal-manager__position">CEO, Einzelwerk</p>
+        </div>
+        <div class="modal-manager__contacts modal-contacts"> 
+          <div class="modal-contacts__item"> <span class="modal-contacts__label">Telegram: </span><a class="modal-contacts__link link-hover" href="">@andrei_bratuhin</a></div>
+          <div class="modal-contacts__item"> <span class="modal-contacts__label">WhatsApp: </span><a class="modal-contacts__link link-hover" href="">Send a message</a></div>
+          <div class="modal-contacts__item"> <span class="modal-contacts__label">Phone: </span><a class="modal-contacts__link link-hover" href="">+49 40 228 51 615</a></div>
         </div>
       </div>
     </div>

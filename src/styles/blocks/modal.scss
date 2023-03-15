@@ -308,6 +308,10 @@
       padding: 20px 50px;
     }
 
+    position: relative;
+
+    overflow: hidden;
+
     width: 100%;
     margin-top: 40px;
     padding: 25px 60px;
@@ -494,5 +498,11 @@
     font-weight: 300;
     line-height: 140%;
     color: var(--gray-300);
+  }
+}
+
+.processing {
+  .main-form__submit .btn__inner {
+    opacity: 0;
   }
 }
