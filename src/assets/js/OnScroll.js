@@ -1,7 +1,20 @@
-window.addEventListener('scroll', () => {
-  if (window.scrollY > document.querySelector('section:first-child').offsetHeight) {
-    document.querySelector('.footer__btn').classList.add('show');
-  } else {
-    document.querySelector('.footer__btn').classList.remove('show');
-  }
-});
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+// gsap.timeline({
+//   scrollTrigger: {
+//     trigger: '.footer',
+//     start: 'top bottom',
+//     markers: true,
+//     onEnter: () => {
+//       document.querySelector('.fixed-buttons').classList.remove('show');
+//       console.log('enet');
+//     },
+//     onLeave: () => {
+//       document.querySelector('.fixed-buttons').classList.add('show');
+//       console.log('leave');
+//     },
+//   },
+// });

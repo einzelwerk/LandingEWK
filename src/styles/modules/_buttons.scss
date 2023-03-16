@@ -17,10 +17,8 @@
     }
 
     position: absolute;
-    position: absolute;
     top: 50%;
     right: 0;
-    transform: rotate(-15deg);
     transform: translateX(85%) translateY(-50%) rotate(-15deg);
 
     display: inline-flex;
@@ -44,14 +42,14 @@
     color: var(--gray-500);
   }
 
-  &:hover {
-    background: #b0c23a;
-  }
-
   &--primary {
     color: var(--gray-900);
     background: var(--accent-color);
     border-radius: 8px;
+
+    &:hover {
+      background: #b0c23a;
+    }
   }
 
   &--purchase {
@@ -63,6 +61,10 @@
 
     background: var(--accent-color);
     border-radius: 8px;
+
+    &:hover {
+      background: #b0c23a;
+    }
   }
 
   &--secondary {
@@ -75,6 +77,17 @@
     border-radius: 8px;
   }
 
+  &--white {
+    padding: 12px 20px;
+    color: var(--gray-900);
+    background: var(--white-color);
+    border-radius: 8px;
+
+    &:hover {
+      background: #e4e4e4;
+    }
+  }
+
   &--icon {
     @include media(md) {
       padding: 22px 15px 22px 20px;
@@ -85,7 +98,6 @@
     position: relative;
     padding: 42px 25px;
     font-size: rem(32px);
-    border-radius: 32px;
 
     .btn__inner {
       @include media(md) {

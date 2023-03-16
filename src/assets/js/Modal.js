@@ -62,12 +62,15 @@ class Modal {
 
 const purchaseModal = new Modal('[data-modal="purchase-modal"]', '[data-modal-el="purchase-modal"]');
 purchaseModal.listener();
+const contactModal = new Modal('[data-modal="contact-modal"]', '[data-modal-el="contact-modal"]');
+contactModal.listener();
+
 const timerModal = new Modal('[data-modal="timer-modal"]', '[data-modal-el="timer-modal"]');
 timerModal.listener();
 
 const timerModalTimeout = () => {
   setTimeout(() => {
-    if (!purchaseModal.isOpen()) {
+    if (!purchaseModal.isOpen() || !contactModal.isOpen()) {
       timerModal.open();
       clearTimeout(timerModalTimeout);
     } else {

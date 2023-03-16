@@ -1,71 +1,179 @@
 .modal-wrapper(data-modal-el="purchase-modal")
-  .modal.modal-purchase 
-    .modal-purchase__inner
-      .modal__close.js-close-modal
+  .modal.modal-purchase
+    .modal-purchase__container
+      .modal__close.modal-purchase__close.js-close-modal
         svg(width="26" height="26")
-          use(xlink:href="sprite.svg#close_sprite") 
-      h4.modal-purchase__title Let’s create
-      .main-form.processing
-        .main-form__item
-          label.main-form__label(for="main-form-name") 
-            span.main-form__label-text Name 
-              span *
-            input#main-form-name.main-form__input(type="text" placeholder="John Doe")
-        .main-form__item.main-form__item--err-validate
-          label.main-form__label(for="main-form-email") 
-            span.main-form__label-text E-mail
-              span *
-            input#main-form-email.main-form__input(type="email" placeholder="example@gmail.com")
-          span.main-form__message An error occured!
-        .main-form__item
-          label.main-form__label(for="main-form-phone") 
-            span.main-form__label-text Phone
-            input#main-form-phone.main-form__input(type="tel" placeholder="example@gmail.com")
-        .main-form__item
-          label.main-form__label(for="main-form-email") 
-            span.main-form__label-text Name 
-              span *
-            .input-number
-              input#main-form-email.main-form__input(type="number" value="1" min="1" max="15" placeholder="example@gmail.com")
-              .input-number__control 
-                button.js-decrement-number.input-number__btn.input-number__btn--minus(type="button" disabled)
-                  svg(width="14" height="14")
-                    use(xlink:href="sprite.svg#minus_sprite") 
-                button.js-increment-number.input-number__btn.input-number__btn--plus(type="button")
-                  svg(width="14" height="14")
-                    use(xlink:href="sprite.svg#plus2_sprite") 
-        fieldset.main-form__payment.payment-methods 
-          legend.payment-methods__title Payment method
-          .payment-methods__grid 
-            label.payment-methods__item(for="main-form-radio-1") 
-              input(type="radio" name="main-form-radio" id="main-form-radio-1" class="payment-methods__radio" checked)
-              span.payment-methods__radio-fake 
-              picture.payment-methods__logo
-                img(src=require('@/images/payment/1.svg'), alt="")
-            label.payment-methods__item(for="main-form-radio-2") 
-              input(type="radio" name="main-form-radio" id="main-form-radio-2" class="payment-methods__radio")
-              span.payment-methods__radio-fake 
-              picture.payment-methods__logo
-                img(src=require('@/images/payment/2.svg'), alt="")
-        .main-form__checkbox.modal-checkbox 
-          label.modal-checkbox__label(for="modal-form-checkbox") 
-            input.modal-checkbox__input(type="checkbox" id="modal-form-checkbox" checked)
-            span.modal-checkbox__fake-input
-            p.modal-checkbox__desc I want to get notifications via phone (SMS / WhatsApp) or E-mail
-        button.main-form__submit.btn.btn--primary(type="submit")
-          span.btn__inner Purchase now for 238$
-          span.main-form__loader.loader
-            span.loader__inner
-        p.main-form__acceptance By clicking on the 'Purchase Now' button, you agree to our 
-          a(href="") Terms and Conditions
-          |  and 
-          a(href="") Privacy Policy 
-        .main-form__money-back.money-back 
-          picture.money-back__image
-            img(src=require('@/images/money-back.svg'), alt="")
-          .money-back__text 
-            h5.money-back__title Money back guarantee
-            p.money-back__desc If you’re not 100% happy with our service in the first 14 days you can request a refund any time you want.
+          use(xlink:href="sprite.svg#close-white_sprite") 
+      .modal-purchase__inner
+        h4.modal-purchase__title Let’s create
+        .manager-mobile.hidden-desktop
+          .manager-mobile__inner
+            .manager-mobile__top
+              picture.manager-mobile__image 
+                img(src=require('@/images/manager-m.jpg'), alt="")
+              .manager-mobile__info
+                h4.manager-mobile__name Andrei Bratuhin
+                p.manager-mobile__position CEO, Einzelwerk
+              button.manager-mobile__btn(type="button" data-trigger="manager")
+                svg(width="24" height="24")
+                  use(xlink:href="sprite.svg#arrow-collapse_sprite") 
+            .manager-mobile__content(data-target="manager")
+              .modal-contacts 
+                .modal-contacts__item 
+                  span.modal-contacts__label Telegram: 
+                  a.modal-contacts__link.link-hover(href="") @andrei_bratuhin
+                .modal-contacts__item 
+                  span.modal-contacts__label WhatsApp: 
+                  a.modal-contacts__link.link-hover(href="") Send a message
+                .modal-contacts__item 
+                  span.modal-contacts__label Phone: 
+                  a.modal-contacts__link.link-hover(href="") +49 40 228 51 615
+        .main-form.processing
+          .main-form__item
+            label.main-form__label(for="main-form-name") 
+              span.main-form__label-text Name 
+                span *
+              input#main-form-name.main-form__input(type="text" placeholder="John Doe")
+          .main-form__item.main-form__item--err-validate
+            label.main-form__label(for="main-form-email") 
+              span.main-form__label-text E-mail
+                span *
+              input#main-form-email.main-form__input(type="email" placeholder="example@gmail.com")
+            span.main-form__message An error occured!
+          .main-form__item
+            label.main-form__label(for="main-form-phone") 
+              span.main-form__label-text Phone
+              input#main-form-phone.main-form__input(type="tel" placeholder="example@gmail.com")
+          .main-form__item
+            label.main-form__label(for="main-form-email") 
+              span.main-form__label-text Name 
+                span *
+              .input-number
+                input#main-form-email.main-form__input(type="number" value="1" min="1" max="15" placeholder="example@gmail.com")
+                .input-number__control 
+                  button.js-decrement-number.input-number__btn.input-number__btn--minus(type="button" disabled)
+                    svg(width="14" height="14")
+                      use(xlink:href="sprite.svg#minus_sprite") 
+                  button.js-increment-number.input-number__btn.input-number__btn--plus(type="button")
+                    svg(width="14" height="14")
+                      use(xlink:href="sprite.svg#plus2_sprite") 
+          fieldset.main-form__payment.payment-methods 
+            legend.payment-methods__title Payment method
+            .payment-methods__grid 
+              label.payment-methods__item(for="main-form-radio-1") 
+                input(type="radio" name="main-form-radio" id="main-form-radio-1" class="payment-methods__radio" checked)
+                span.payment-methods__radio-fake 
+                picture.payment-methods__logo
+                  img(src=require('@/images/payment/1.svg'), alt="")
+              label.payment-methods__item(for="main-form-radio-2") 
+                input(type="radio" name="main-form-radio" id="main-form-radio-2" class="payment-methods__radio")
+                span.payment-methods__radio-fake 
+                picture.payment-methods__logo
+                  img(src=require('@/images/payment/2.svg'), alt="")
+          .main-form__checkbox.modal-checkbox 
+            label.modal-checkbox__label(for="modal-form-checkbox") 
+              input.modal-checkbox__input(type="checkbox" id="modal-form-checkbox" checked)
+              span.modal-checkbox__fake-input
+              p.modal-checkbox__desc I want to get notifications via phone (SMS / WhatsApp) or E-mail
+          button.main-form__submit.btn.btn--primary(type="submit")
+            span.btn__inner Purchase now for 238$
+            span.main-form__loader.loader
+              span.loader__inner
+          p.main-form__acceptance By clicking on the 'Purchase Now' button, you agree to our 
+            a(href="") Terms and Conditions
+            |  and 
+            a(href="") Privacy Policy 
+      .modal-manager
+        picture.modal-manager__image
+          img(src=require('@/images/modal-a.jpg'), alt="")
+        h3.modal-manager__title Any Questions?
+        p.modal-manager__subtitle Feel free to contact us
+        .modal-manager__info 
+          h4.modal-manager__name Andrei Bratuhin
+          p.modal-manager__position CEO, Einzelwerk
+        .modal-manager__contacts.modal-contacts 
+          .modal-contacts__item 
+            span.modal-contacts__label Telegram: 
+            a.modal-contacts__link.link-hover(href="") @andrei_bratuhin
+          .modal-contacts__item 
+            span.modal-contacts__label WhatsApp: 
+            a.modal-contacts__link.link-hover(href="") Send a message
+          .modal-contacts__item 
+            span.modal-contacts__label Phone: 
+            a.modal-contacts__link.link-hover(href="") +49 40 228 51 615
+.modal-wrapper(data-modal-el="contact-modal")
+  .modal.modal-purchase
+    .modal-purchase__container
+      .modal__close.modal-purchase__close.js-close-modal
+        svg(width="26" height="26")
+          use(xlink:href="sprite.svg#close-white_sprite") 
+      .modal-purchase__inner
+        h4.modal-purchase__title Get in touch
+        .manager-mobile.hidden-desktop
+          .manager-mobile__inner
+            .manager-mobile__top
+              picture.manager-mobile__image 
+                img(src=require('@/images/manager-m.jpg'), alt="")
+              .manager-mobile__info
+                h4.manager-mobile__name Andrei Bratuhin
+                p.manager-mobile__position CEO, Einzelwerk
+              button.manager-mobile__btn(type="button" data-trigger="manager")
+                svg(width="24" height="24")
+                  use(xlink:href="sprite.svg#arrow-collapse_sprite") 
+            .manager-mobile__content(data-target="manager")
+              .modal-contacts 
+                .modal-contacts__item 
+                  span.modal-contacts__label Telegram: 
+                  a.modal-contacts__link.link-hover(href="") @andrei_bratuhin
+                .modal-contacts__item 
+                  span.modal-contacts__label WhatsApp: 
+                  a.modal-contacts__link.link-hover(href="") Send a message
+                .modal-contacts__item 
+                  span.modal-contacts__label Phone: 
+                  a.modal-contacts__link.link-hover(href="") +49 40 228 51 615
+        .main-form.processing
+          .main-form__item
+            label.main-form__label(for="main-form-name") 
+              span.main-form__label-text Name 
+                span *
+              input#main-form-name.main-form__input(type="text" placeholder="John Doe")
+          .main-form__item.main-form__item--err-validate
+            label.main-form__label(for="main-form-email") 
+              span.main-form__label-text E-mail
+                span *
+              input#main-form-email.main-form__input(type="email" placeholder="example@gmail.com")
+            span.main-form__message An error occured!
+          .main-form__item
+            label.main-form__label(for="main-form-phone") 
+              span.main-form__label-text Phone
+              input#main-form-phone.main-form__input(type="tel" placeholder="example@gmail.com")
+          .main-form__item
+            label.main-form__label(for="main-form-email") 
+              span.main-form__label-text Contact method *
+                span *
+              input#main-form-email.main-form__input(type="email" placeholder="Telegram/WhatsApp/Email")
+            span.main-form__message An error occured!
+          button.main-form__submit.btn.btn--primary(type="submit")
+            span.btn__inner Purchase now for 238$
+            span.main-form__loader.loader
+              span.loader__inner
+          p.main-form__acceptance By clicking on the 'Purchase Now' button, you agree to our 
+            a(href="") Terms and Conditions
+            |  and 
+            a(href="") Privacy Policy 
+      .modal-manager
+        picture.modal-manager__image
+          img(src=require('@/images/modal-m.jpg'), alt="")
+        .modal-manager__info 
+          h4.modal-manager__name Mark Levshits
+          p.modal-manager__position Project manager
+        .modal-manager__contacts.modal-contacts 
+          .modal-contacts__item 
+            span.modal-contacts__label Telegram: 
+            a.modal-contacts__link.link-hover(href="") @andrei_bratuhin
+          .modal-contacts__item 
+            span.modal-contacts__label WhatsApp: 
+            a.modal-contacts__link.link-hover(href="") Send a message
 
 
 .modal-wrapper(data-modal-el="timer-modal")

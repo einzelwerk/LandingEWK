@@ -1,13 +1,19 @@
-section.section.container
+section.hero-section
   .hero
-    h1.hero__title A set of high-conversion ADS creatives
-      span.hero__badge
-        span.hero__price 99$
-        span.hero__vat +VAT
-    p.hero__desc Test ideas and increase conversions, we'll take care of the rest
-    .hero__video-wrapper.js-toggle-sound
-      .hero__video.video
-        button.video__control-sound.js-toggle-sound.hidden-desktop
-          svg(width="40" height="40")
-            use(href="sprite.svg#on-sound_sprite") 
-        video.video__src(src="https://einzelwerk.ru/assets/images/hero-10215256.mp4" muted playsinline loop autoplay) 
+    picture.hero__grid.container(aria-hidden="true")
+      img(src=require('@/images/grid.svg'),  alt="")
+    .hero__text
+      h1.hero__title Set of
+        span.js-counter 12
+        | Awesome Custom-designed Creatives for Your ADS- Campaign 
+      p.hero__desc Test ideas and increase conversions, we'll take care of the rest
+      button.hero__btn.btn.btn--primary(type="button" data-modal="purchase-modal") Purchase now for 119$
+    .hero-cards.container
+      picture.hero-cards__item.js-show-cards
+        img(src=require('@/images/hero-cards/1.jpg'), alt="")
+      picture.hero-cards__item.js-show-cards
+        img(src=require('@/images/hero-cards/2.jpg'), alt="")
+      picture.hero-cards__item.js-show-cards
+        img(src=require('@/images/hero-cards/3.jpg'), alt="")
+      picture.hero-cards__item.js-show-cards
+        img(src=require('@/images/hero-cards/4.jpg'), alt="")

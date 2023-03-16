@@ -11,3 +11,6 @@ import './Infobox';
 import './OnScroll';
 import './InputNumber';
 import './Scrollbar';
+import './ToggleClass';
+import './CalcHeaderHeight';
+import './Animations';
