@@ -141,6 +141,78 @@
     </div>
   </div>
 </div>
+<div class="modal-wrapper" data-modal-el="contact-modal">
+  <div class="modal modal-purchase">
+    <div class="modal-purchase__container">
+      <div class="modal__close modal-purchase__close js-close-modal">
+        <svg width="26" height="26">
+          <use xlink:href="sprite.svg#close-white_sprite"> </use>
+        </svg>
+      </div>
+      <div class="modal-purchase__inner">
+        <h4 class="modal-purchase__title">Get in touch</h4>
+        <div class="manager-mobile hidden-desktop">
+          <div class="manager-mobile__inner">
+            <div class="manager-mobile__top">
+              <picture class="manager-mobile__image"> <img src="assets/images/manager-m.jpg" alt=""></picture>
+              <div class="manager-mobile__info">
+                <h4 class="manager-mobile__name">Andrei Bratuhin</h4>
+                <p class="manager-mobile__position">CEO, Einzelwerk</p>
+              </div>
+              <button class="manager-mobile__btn" type="button" data-trigger="manager">
+                <svg width="24" height="24">
+                  <use xlink:href="sprite.svg#arrow-collapse_sprite"> </use>
+                </svg>
+              </button>
+            </div>
+            <div class="manager-mobile__content" data-target="manager">
+              <div class="modal-contacts"> 
+                <div class="modal-contacts__item"> <span class="modal-contacts__label">Telegram: </span><a class="modal-contacts__link link-hover" href="">@andrei_bratuhin</a></div>
+                <div class="modal-contacts__item"> <span class="modal-contacts__label">WhatsApp: </span><a class="modal-contacts__link link-hover" href="">Send a message</a></div>
+                <div class="modal-contacts__item"> <span class="modal-contacts__label">Phone: </span><a class="modal-contacts__link link-hover" href="">+49 40 228 51 615</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-form processing">
+          <div class="main-form__item">
+            <label class="main-form__label" for="main-form-name"> <span class="main-form__label-text">Name <span>*</span></span>
+              <input class="main-form__input" id="main-form-name" type="text" placeholder="John Doe">
+            </label>
+          </div>
+          <div class="main-form__item main-form__item--err-validate">
+            <label class="main-form__label" for="main-form-email"> <span class="main-form__label-text">E-mail<span>*</span></span>
+              <input class="main-form__input" id="main-form-email" type="email" placeholder="example@gmail.com">
+            </label><span class="main-form__message">An error occured!</span>
+          </div>
+          <div class="main-form__item">
+            <label class="main-form__label" for="main-form-phone"> <span class="main-form__label-text">Phone</span>
+              <input class="main-form__input" id="main-form-phone" type="tel" placeholder="example@gmail.com">
+            </label>
+          </div>
+          <div class="main-form__item">
+            <label class="main-form__label" for="main-form-email"> <span class="main-form__label-text">Contact method *<span>*</span></span>
+              <input class="main-form__input" id="main-form-email" type="email" placeholder="Telegram/WhatsApp/Email">
+            </label><span class="main-form__message">An error occured!</span>
+          </div>
+          <button class="main-form__submit btn btn--primary" type="submit"><span class="btn__inner">Purchase now for 238$</span><span class="main-form__loader loader"><span class="loader__inner"></span></span></button>
+          <p class="main-form__acceptance">By clicking on the 'Purchase Now' button, you agree to our <a href="">Terms and Conditions</a> and <a href="">Privacy Policy </a></p>
+        </div>
+      </div>
+      <div class="modal-manager">
+        <picture class="modal-manager__image"><img src="assets/images/modal-m.jpg" alt=""></picture>
+        <div class="modal-manager__info"> 
+          <h4 class="modal-manager__name">Mark Levshits</h4>
+          <p class="modal-manager__position">Project manager</p>
+        </div>
+        <div class="modal-manager__contacts modal-contacts"> 
+          <div class="modal-contacts__item"> <span class="modal-contacts__label">Telegram: </span><a class="modal-contacts__link link-hover" href="">@andrei_bratuhin</a></div>
+          <div class="modal-contacts__item"> <span class="modal-contacts__label">WhatsApp: </span><a class="modal-contacts__link link-hover" href="">Send a message</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="modal-wrapper" data-modal-el="timer-modal">
   <div class="modal modal-timer">
     <div class="modal-timer__inner">

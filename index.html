@@ -18,28 +18,25 @@
         <li class="nav__item"> <a class="nav__link link-hover" href="#results">Deliverables</a></li>
       </ul>
     </nav>
+    <button class="header__btn btn btn--white hidden-mobile" type="button" data-modal="contact-modal"><span class="btn__inner">Contact us</span></button>
     <button class="header__btn btn btn--primary hidden-mobile" type="button" data-modal="purchase-modal"><span class="btn__inner">Get a set of creatives</span></button>
     <button class="header__btn btn btn--primary hidden-desktop" type="button" data-modal="purchase-modal"><span class="btn__inner">Get a set</span></button>
   </div>
 </header>
       <main class="main">
-<section class="section section--s container"> 
-  <div class="hero-secondary">
-    <div class="hero-secondary__text"> 
-      <h1 class="hero-secondary__title">A set of high-conversion ADS creatives</h1>
-      <p class="hero-secondary__desc">Test ideas and increase conversions, we'll take care of the rest</p>
-      <button class="hero-secondary__btn btn btn--primary" type="button" data-modal="purchase-modal">Get a set of creatives</button>
+<section class="hero-section">
+  <div class="hero">
+    <picture class="hero__grid container" aria-hidden="true"><img src="assets/images/grid.svg" alt=""></picture>
+    <div class="hero__text">
+      <h1 class="hero__title">Set of 12 Awesome Custom-designed Creatives for Your ADS- Campaign </h1>
+      <p class="hero__desc">Test ideas and increase conversions, we'll take care of the rest</p>
+      <button class="hero__btn btn btn--primary" type="button" data-modal="purchase-modal">Purchase now for 119$</button>
     </div>
-    <div class="hero-secondary__video-wrapper js-toggle-sound">
-      <div class="hero-secondary__price"> <span aria-label="price">119$</span><span class="hero-secondary__vat">+VAT</span></div>
-      <div class="hero-secondary__video video">
-        <button class="video__control-sound js-toggle-sound hidden-desktop">
-          <svg width="40" height="40">
-            <use href="sprite.svg#on-sound_sprite"> </use>
-          </svg>
-        </button>
-        <video class="video__src" src="https://einzelwerk.ru/assets/images/hero-10215256.mp4" muted playsinline loop autoplay> </video>
-      </div>
+    <div class="hero-cards container">
+      <picture class="hero-cards__item"><img src="assets/images/hero-cards/1.jpg" alt=""></picture>
+      <picture class="hero-cards__item"><img src="assets/images/hero-cards/2.jpg" alt=""></picture>
+      <picture class="hero-cards__item"><img src="assets/images/hero-cards/3.jpg" alt=""></picture>
+      <picture class="hero-cards__item"><img src="assets/images/hero-cards/4.jpg" alt=""></picture>
     </div>
   </div>
 </section>
@@ -133,7 +130,7 @@
           <picture class="cases__media"><img src="assets/images/cases/0-2.jpg" alt=""></picture>
         </div>
         <div class="cases__item">
-          <video class="cases__media" src="assets/images/video/1.mp4" autoplay muted playsinline loop></video>
+          <video class="cases__media" src="assets/images/video/0.mp4" autoplay muted playsinline loop></video>
         </div>
         <div class="cases__item">
           <picture class="cases__media"><img src="assets/images/cases/0-4.jpg" alt=""></picture>
@@ -147,7 +144,7 @@
           <picture class="cases__media"><img src="assets/images/cases/1-2.jpg" alt=""></picture>
         </div>
         <div class="cases__item">
-          <video class="cases__media" src="assets/images/video/2.mp4" autoplay muted playsinline loop></video>
+          <video class="cases__media" src="assets/images/video/0.mp4" autoplay muted playsinline loop></video>
         </div>
         <div class="cases__item">
           <picture class="cases__media"><img src="assets/images/cases/1-4.jpg" alt=""></picture>
@@ -161,7 +158,7 @@
           <picture class="cases__media"><img src="assets/images/cases/2-2.jpg" alt=""></picture>
         </div>
         <div class="cases__item">
-          <video class="cases__media" src="assets/images/video/0.mp4" autoplay muted playsinline loop></video>
+          <video class="cases__media" src="assets/images/video/1.mp4" autoplay muted playsinline loop></video>
         </div>
         <div class="cases__item">
           <picture class="cases__media"><img src="assets/images/cases/2-4.jpg" alt=""></picture>
@@ -175,7 +172,7 @@
           <picture class="cases__media"><img src="assets/images/cases/3-2.jpg" alt=""></picture>
         </div>
         <div class="cases__item">
-          <video class="cases__media" src="assets/images/video/1.mp4" autoplay muted playsinline loop></video>
+          <video class="cases__media" src="assets/images/video/2.mp4" autoplay muted playsinline loop></video>
         </div>
         <div class="cases__item">
           <picture class="cases__media"><img src="assets/images/cases/3-4.jpg" alt=""></picture>
@@ -882,6 +879,78 @@
           <div class="modal-contacts__item"> <span class="modal-contacts__label">Telegram: </span><a class="modal-contacts__link link-hover" href="">@andrei_bratuhin</a></div>
           <div class="modal-contacts__item"> <span class="modal-contacts__label">WhatsApp: </span><a class="modal-contacts__link link-hover" href="">Send a message</a></div>
           <div class="modal-contacts__item"> <span class="modal-contacts__label">Phone: </span><a class="modal-contacts__link link-hover" href="">+49 40 228 51 615</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-wrapper" data-modal-el="contact-modal">
+  <div class="modal modal-purchase">
+    <div class="modal-purchase__container">
+      <div class="modal__close modal-purchase__close js-close-modal">
+        <svg width="26" height="26">
+          <use xlink:href="sprite.svg#close-white_sprite"> </use>
+        </svg>
+      </div>
+      <div class="modal-purchase__inner">
+        <h4 class="modal-purchase__title">Get in touch</h4>
+        <div class="manager-mobile hidden-desktop">
+          <div class="manager-mobile__inner">
+            <div class="manager-mobile__top">
+              <picture class="manager-mobile__image"> <img src="assets/images/manager-m.jpg" alt=""></picture>
+              <div class="manager-mobile__info">
+                <h4 class="manager-mobile__name">Andrei Bratuhin</h4>
+                <p class="manager-mobile__position">CEO, Einzelwerk</p>
+              </div>
+              <button class="manager-mobile__btn" type="button" data-trigger="manager">
+                <svg width="24" height="24">
+                  <use xlink:href="sprite.svg#arrow-collapse_sprite"> </use>
+                </svg>
+              </button>
+            </div>
+            <div class="manager-mobile__content" data-target="manager">
+              <div class="modal-contacts"> 
+                <div class="modal-contacts__item"> <span class="modal-contacts__label">Telegram: </span><a class="modal-contacts__link link-hover" href="">@andrei_bratuhin</a></div>
+                <div class="modal-contacts__item"> <span class="modal-contacts__label">WhatsApp: </span><a class="modal-contacts__link link-hover" href="">Send a message</a></div>
+                <div class="modal-contacts__item"> <span class="modal-contacts__label">Phone: </span><a class="modal-contacts__link link-hover" href="">+49 40 228 51 615</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-form processing">
+          <div class="main-form__item">
+            <label class="main-form__label" for="main-form-name"> <span class="main-form__label-text">Name <span>*</span></span>
+              <input class="main-form__input" id="main-form-name" type="text" placeholder="John Doe">
+            </label>
+          </div>
+          <div class="main-form__item main-form__item--err-validate">
+            <label class="main-form__label" for="main-form-email"> <span class="main-form__label-text">E-mail<span>*</span></span>
+              <input class="main-form__input" id="main-form-email" type="email" placeholder="example@gmail.com">
+            </label><span class="main-form__message">An error occured!</span>
+          </div>
+          <div class="main-form__item">
+            <label class="main-form__label" for="main-form-phone"> <span class="main-form__label-text">Phone</span>
+              <input class="main-form__input" id="main-form-phone" type="tel" placeholder="example@gmail.com">
+            </label>
+          </div>
+          <div class="main-form__item">
+            <label class="main-form__label" for="main-form-email"> <span class="main-form__label-text">Contact method *<span>*</span></span>
+              <input class="main-form__input" id="main-form-email" type="email" placeholder="Telegram/WhatsApp/Email">
+            </label><span class="main-form__message">An error occured!</span>
+          </div>
+          <button class="main-form__submit btn btn--primary" type="submit"><span class="btn__inner">Purchase now for 238$</span><span class="main-form__loader loader"><span class="loader__inner"></span></span></button>
+          <p class="main-form__acceptance">By clicking on the 'Purchase Now' button, you agree to our <a href="">Terms and Conditions</a> and <a href="">Privacy Policy </a></p>
+        </div>
+      </div>
+      <div class="modal-manager">
+        <picture class="modal-manager__image"><img src="assets/images/modal-m.jpg" alt=""></picture>
+        <div class="modal-manager__info"> 
+          <h4 class="modal-manager__name">Mark Levshits</h4>
+          <p class="modal-manager__position">Project manager</p>
+        </div>
+        <div class="modal-manager__contacts modal-contacts"> 
+          <div class="modal-contacts__item"> <span class="modal-contacts__label">Telegram: </span><a class="modal-contacts__link link-hover" href="">@andrei_bratuhin</a></div>
+          <div class="modal-contacts__item"> <span class="modal-contacts__label">WhatsApp: </span><a class="modal-contacts__link link-hover" href="">Send a message</a></div>
         </div>
       </div>
     </div>
