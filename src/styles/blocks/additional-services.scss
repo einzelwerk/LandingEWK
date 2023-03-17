@@ -1,13 +1,15 @@
 @use '../utils/mixins' as *;
 
 .additional-services {
-  max-width: 950px;
   margin: auto;
 
   &__title {
     @include media(md) {
       font-size: rem(24px);
     }
+
+    max-width: 756px;
+    margin: auto;
 
     font-size: rem(40px);
     line-height: 121%;
@@ -22,7 +24,7 @@
       grid-template-columns: max-content max-content;
     }
 
-    transform: translateY(-15px);
+    transform: translateY(-4px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

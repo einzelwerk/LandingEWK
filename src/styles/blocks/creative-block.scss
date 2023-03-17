@@ -106,7 +106,7 @@
       font-size: 24px;
     }
 
-    max-width: 1000px;
+    max-width: 856px;
     margin: auto;
 
     font-size: rem(40px);
@@ -116,7 +116,7 @@
 
   &__tags {
     @include media(md, min-width) {
-      transform: translateY(-15px);
+      transform: translateY(-4px);
     }
   }
 
