@@ -1,6 +1,12 @@
 @use '../utils/mixins' as *;
 
 .cta-messenger {
+  @include media(md) {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px var(--gap);
+  }
+
   display: flex;
   gap: 100px;
   align-items: center;
@@ -22,12 +28,26 @@
   }
 
   &__desc {
+    @include media(lg) {
+      gap: 16px;
+    }
+
+    display: flex;
+    align-items: center;
+
     font-size: rem(20px);
     font-weight: 300;
+    line-height: 150%;
     color: var(--gray-300);
   }
 
   &__manager-info {
+    @include media(lg) {
+      flex: none;
+      width: 100px;
+      height: 100px;
+    }
+
     position: relative;
 
     overflow: hidden;
@@ -42,5 +62,95 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__manager {
+    @include media(md) {
+      width: 100%;
+    }
+
+    display: flex;
+  }
+
+  &__manager-name {
+    @include media(lg) {
+      bottom: 6px;
+      font-size: rem(8px);
+    }
+
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: var(--white-color);
+  }
+
+  &__feedback {
+    @include media(md) {
+      flex-direction: row-reverse;
+      gap: 10px;
+
+      width: auto;
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+      padding: 18px 40px;
+
+      background: var(--gray-800);
+      border-radius: 12px;
+    }
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 280px;
+    height: 280px;
+    margin-left: -3rem;
+
+    background: var(--gray-900);
+    border-radius: 50%;
+
+    transition: transform 0.25s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__feedback-icon {
+    @include media(md) {
+      margin-bottom: 0;
+    }
+
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
+
+  &__feedback-text {
+    font-size: rem(20px);
+    line-height: 150%;
+    text-align: center;
+
+    br {
+      @include media(md) {
+        display: none;
+      }
+    }
   }
 }

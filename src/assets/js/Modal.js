@@ -68,17 +68,14 @@ contactModal.listener();
 const timerModal = new Modal('[data-modal="timer-modal"]', '[data-modal-el="timer-modal"]');
 timerModal.listener();
 
-const timerModalTimeout = () => {
-  setTimeout(() => {
-    if (!purchaseModal.isOpen() || !contactModal.isOpen()) {
-      timerModal.open();
-      clearTimeout(timerModalTimeout);
-    } else {
-      timerModalTimeout();
-    }
-  }, 25000);
-};
-
 window.addEventListener('load', () => {
-  timerModalTimeout();
+  let isExecuted = false;
+  setTimeout(() => {
+    document.addEventListener('mousemove', (e) => {
+      if (!isExecuted && e.clientY === 1) {
+        timerModal.open();
+        isExecuted = true;
+      }
+    });
+  }, 3000);
 });

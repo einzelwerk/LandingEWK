@@ -3,18 +3,27 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.footer',
-//     start: 'top bottom',
-//     markers: true,
-//     onEnter: () => {
-//       document.querySelector('.fixed-buttons').classList.remove('show');
-//       console.log('enet');
-//     },
-//     onLeave: () => {
-//       document.querySelector('.fixed-buttons').classList.add('show');
-//       console.log('leave');
-//     },
-//   },
-// });
+const tl = gsap.timeline({ paused: true });
+tl.from('.fixed-buttons', {
+  duration: 0.25,
+  autoAlpha: 0,
+});
+document.querySelectorAll('.section').forEach((show) => {
+  ScrollTrigger.create({
+    trigger: show,
+    start: 'top bottom',
+    end: 'bottom bottom',
+    onEnter: () => {
+      tl.play();
+    },
+    onLeave: () => {
+      tl.reverse();
+    },
+    onEnterBack: () => {
+      tl.play();
+    },
+    onLeaveBack: () => {
+      tl.reverse();
+    },
+  });
+});
