@@ -1,8 +1,6 @@
 const counterSpan = document.querySelector('.js-counter');
 const counterMax = parseInt(counterSpan.textContent, 10);
-
 let counter = 0;
-
 function animateCounter() {
   // eslint-disable-next-line no-plusplus
   counter++;
@@ -13,4 +11,6 @@ function animateCounter() {
   }
 }
 
-animateCounter();
+if (counterSpan) {
+  animateCounter();
+}
