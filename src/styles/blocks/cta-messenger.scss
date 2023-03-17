@@ -1,0 +1,46 @@
+@use '../utils/mixins' as *;
+
+.cta-messenger {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+
+  padding: 80px 60px;
+
+  background: var(--gray-1000);
+  border: 1px solid var(--gray-800);
+  border-radius: 36px;
+
+  &__text {
+    max-width: 600px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: rem(44px);
+    color: var(--white-color);
+  }
+
+  &__desc {
+    font-size: rem(20px);
+    font-weight: 300;
+    color: var(--gray-300);
+  }
+
+  &__manager-info {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
