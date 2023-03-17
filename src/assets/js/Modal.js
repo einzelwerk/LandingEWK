@@ -72,7 +72,7 @@ window.addEventListener('load', () => {
   let isExecuted = false;
   setTimeout(() => {
     document.addEventListener('mousemove', (e) => {
-      if (!isExecuted && e.clientY === 1) {
+      if (!isExecuted && e.clientY < 2) {
         timerModal.open();
         isExecuted = true;
       }

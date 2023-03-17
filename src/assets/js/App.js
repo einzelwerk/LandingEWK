@@ -1,3 +1,4 @@
+import './Counter';
 import './Init';
 import './Sliders';
 import './Tabs';
