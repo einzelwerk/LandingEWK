@@ -90,13 +90,15 @@ class TabSwitcher {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const featuresTabs = new TabSwitcher(document.querySelector('.js-features-tab'));
-  featuresTabs.onTabSwitch(() => {
-    const elem = document.querySelector('.features__button[aria-selected="true"]');
-    const height = elem.querySelector('.features__description').offsetHeight;
-    document.querySelectorAll('.features__button').forEach((btn) => {
-      btn.style.setProperty('--desc-height', '0');
+  const featuresTabs = new TabSwitcher(document?.querySelector('.js-features-tab'));
+  if (featuresTabs) {
+    featuresTabs.onTabSwitch(() => {
+      const elem = document.querySelector('.features__button[aria-selected="true"]');
+      const height = elem.querySelector('.features__description').offsetHeight;
+      document.querySelectorAll('.features__button').forEach((btn) => {
+        btn.style.setProperty('--desc-height', '0');
+      });
+      elem.style.setProperty('--desc-height', `${height}px`);
     });
-    elem.style.setProperty('--desc-height', `${height}px`);
-  });
+  }
 });
