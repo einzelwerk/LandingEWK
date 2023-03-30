@@ -6,7 +6,9 @@ class TabSwitcher {
     this.element = element;
     this.tabs = this.element?.querySelectorAll('[role="tab"]');
     this.panels = this.element?.querySelectorAll('[role="tabpanel"]');
-    [this.currentTab] = this.element.querySelectorAll('[role="tab"]');
+    if (this.element) {
+      [this.currentTab] = this.element.querySelectorAll('[role="tab"]');
+    }
     this.onTabSwitchCallback = null;
 
     this.init();
