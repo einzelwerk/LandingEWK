@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     featuresTabs.onTabSwitch(() => {
       const elem = document.querySelector('.features__button[aria-selected="true"]');
       const height = elem.querySelector('.features__description').offsetHeight;
-      document.querySelectorAll('.features__button').forEach((btn) => {
+      document.querySelectorAll('.features__button')?.forEach((btn) => {
         btn.style.setProperty('--desc-height', '0');
       });
       elem.style.setProperty('--desc-height', `${height}px`);
