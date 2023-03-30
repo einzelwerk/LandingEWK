@@ -18,7 +18,7 @@ class TabSwitcher {
 
   init() {
     // Add click and keydown event listeners to tabs
-    this.tabs.forEach((tab) => {
+    this.tabs?.forEach((tab) => {
       tab.addEventListener('click', () => this.selectTab(tab));
       tab.addEventListener('keydown', (event) => this.handleTabKeydown(event, tab));
     });
