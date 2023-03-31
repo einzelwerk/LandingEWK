@@ -11,6 +11,11 @@
   padding: 30px 0 40px;
 
   &__title {
+    @include media(md) {
+      margin-bottom: 20px;
+      font-size: rem(24px);
+    }
+
     margin-bottom: 32px;
 
     font-size: rem(48px);
@@ -33,6 +38,10 @@
   }
 
   &__btn {
+    @include media(md) {
+      margin-top: 40px;
+    }
+
     width: 100%;
     margin-top: 48px;
     padding: 25px;

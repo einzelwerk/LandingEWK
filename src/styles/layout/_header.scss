@@ -26,6 +26,11 @@
   }
 
   &__btn {
+    @include media(md) {
+      padding: 10px 12px;
+      font-size: rem(14px);
+    }
+
     margin-right: 12px;
     line-height: 150%;
 
