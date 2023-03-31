@@ -25,12 +25,17 @@
   }
 
   &__desc {
+    @include media(md) {
+      font-size: rem(14px);
+    }
+
     display: flex;
     align-items: center;
 
     font-size: rem(24px);
     font-weight: 350;
     color: var(--gray-300);
+    text-align: center;
 
     svg {
       margin-left: 12px;
