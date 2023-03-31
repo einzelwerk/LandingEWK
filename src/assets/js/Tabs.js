@@ -10,13 +10,12 @@ class TabSwitcher {
     [this.currentTab] = this.element.querySelectorAll('[role="tab"]');
 
     this.onTabSwitchCallback = null;
-    if (this.element) {
-      this.init();
-    }
+
+    this.init();
   }
 
   init() {
-    // Add click and keydown event listeners to tabs
+    if (!this.element || this.currentTab) return;
     this.tabs?.forEach((tab) => {
       tab.addEventListener('click', () => this.selectTab(tab));
       tab.addEventListener('keydown', (event) => this.handleTabKeydown(event, tab));
